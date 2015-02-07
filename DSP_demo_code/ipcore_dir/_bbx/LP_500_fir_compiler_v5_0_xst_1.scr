@@ -1,0 +1,13 @@
+set -xsthdpdir "./tmp/_cg/LP_500_fir_compiler_v5_0_xst_1_xsd"
+set -loop_iteration_limit 300000
+run
+-ifn "./tmp/_cg/_bbx/LP_500_fir_compiler_v5_0_xst_1.prj"
+-ifmt vhdl
+-ofmt NGC
+-ofn "./tmp/_cg/LP_500_fir_compiler_v5_0_xst_1.ngc"
+-p xc6slx9-2-tqg144
+-iobuf NO
+-work_lib fir_compiler_v5_0
+-ent LP_500_fir_compiler_v5_0_xst_1
+-arch spartan6
+-bus_delimiter <>

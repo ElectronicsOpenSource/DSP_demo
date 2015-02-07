@@ -1,0 +1,1181 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: DSP_demo.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DSP_demo.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DSP_demo"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : DSP_demo
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\ipcore_dir\DCM.vhd" into library work
+Parsing entity <DCM>.
+Parsing architecture <xilinx> of entity <dcm>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\ipcore_dir\Filter1.vhd" into library work
+Parsing entity <Filter1>.
+Parsing architecture <Filter1_a> of entity <filter1>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\ipcore_dir\Filter2.vhd" into library work
+Parsing entity <Filter2>.
+Parsing architecture <Filter2_a> of entity <filter2>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\ipcore_dir\Filter3.vhd" into library work
+Parsing entity <Filter3>.
+Parsing architecture <Filter3_a> of entity <filter3>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\ipcore_dir\Filter4.vhd" into library work
+Parsing entity <Filter4>.
+Parsing architecture <Filter4_a> of entity <filter4>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\ipcore_dir\Filter5.vhd" into library work
+Parsing entity <Filter5>.
+Parsing architecture <Filter5_a> of entity <filter5>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\spi_master.vhd" into library work
+Parsing entity <spi_master>.
+INFO:HDLCompiler:1676 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\spi_master.vhd" Line 45. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+INFO:HDLCompiler:1676 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\spi_master.vhd" Line 46. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+Parsing architecture <logic> of entity <spi_master>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\RS232_Interface_v1.vhd" into library work
+Parsing entity <RS232_Interface_v1>.
+Parsing architecture <Behavioral> of entity <rs232_interface_v1>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\AD7865_Interface_v1.vhd" into library work
+Parsing entity <AD7685_Interface_v2>.
+Parsing architecture <Behavioral> of entity <ad7685_interface_v2>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" into library work
+Parsing entity <DSP_demo>.
+INFO:HDLCompiler:1676 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" Line 46. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+INFO:HDLCompiler:1676 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" Line 47. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+INFO:HDLCompiler:1676 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" Line 54. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+INFO:HDLCompiler:1676 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" Line 55. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+Parsing architecture <Behavioral> of entity <dsp_demo>.
+INFO:HDLCompiler:1676 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" Line 165. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+INFO:HDLCompiler:1676 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" Line 166. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <DSP_demo> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" Line 86: Using initial value "00000000" for rs232_tx_data since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" Line 87: Using initial value '0' for rs232_tx_req since it is never assigned
+
+Elaborating entity <DCM> (architecture <xilinx>) from library <work>.
+
+Elaborating entity <Filter1> (architecture <Filter1_a>) from library <work>.
+
+Elaborating entity <Filter2> (architecture <Filter2_a>) from library <work>.
+
+Elaborating entity <Filter3> (architecture <Filter3_a>) from library <work>.
+
+Elaborating entity <Filter4> (architecture <Filter4_a>) from library <work>.
+
+Elaborating entity <Filter5> (architecture <Filter5_a>) from library <work>.
+
+Elaborating entity <spi_master> (architecture <logic>) with generics from library <work>.
+
+Elaborating entity <AD7685_Interface_v2> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <RS232_Interface_v1> (architecture <Behavioral>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <DSP_demo>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd".
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 248: Output port <LOCKED> of the instance <DCM_Global> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 258: Output port <rfd> of the instance <LP50Hz> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 258: Output port <rdy> of the instance <LP50Hz> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 266: Output port <rfd> of the instance <HP4000Hz> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 266: Output port <rdy> of the instance <HP4000Hz> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 274: Output port <rfd> of the instance <BP1500Hz> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 274: Output port <rdy> of the instance <BP1500Hz> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 282: Output port <rfd> of the instance <BS1500Hz> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 282: Output port <rdy> of the instance <BS1500Hz> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 290: Output port <rfd> of the instance <BP250Hz_650Hz> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 290: Output port <rdy> of the instance <BP250Hz_650Hz> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 298: Output port <rx_data> of the instance <DAC1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 298: Output port <busy> of the instance <DAC1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 316: Output port <rx_data> of the instance <DAC2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 316: Output port <busy> of the instance <DAC2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 334: Output port <Trigger_out> of the instance <ADC1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 343: Output port <Trigger_out> of the instance <ADC2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 352: Output port <rs232_dat_out> of the instance <UART1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\DSP_demo.vhd" line 352: Output port <rs232_txd_busy> of the instance <UART1> is unconnected or connected to loadless signal.
+WARNING:Xst:2935 - Signal 'DAC1_LDAC', unconnected in block 'DSP_demo', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'DAC1_SHDN', unconnected in block 'DSP_demo', is tied to its initial value (1).
+WARNING:Xst:2935 - Signal 'DAC2_LDAC', unconnected in block 'DSP_demo', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'DAC2_SHDN', unconnected in block 'DSP_demo', is tied to its initial value (1).
+    Found 26-bit register for signal <ctr32>.
+    Found 5-bit register for signal <us_tick>.
+    Found 1-bit register for signal <LED_5>.
+    Found 1-bit register for signal <LED_6>.
+    Found 1-bit register for signal <LED_7>.
+    Found 1-bit register for signal <LED_8>.
+    Found 1-bit register for signal <LED_9>.
+    Found 1-bit register for signal <LED_10>.
+    Found 16-bit register for signal <DAC1out>.
+    Found 16-bit register for signal <DAC2out>.
+    Found 1-bit register for signal <DAC1enable>.
+    Found 1-bit register for signal <DAC2enable>.
+    Found 3-bit register for signal <Filter_select>.
+    Found 3-bit adder for signal <Filter_select[2]_GND_6_o_add_1_OUT> created at line 369.
+    Found 26-bit adder for signal <ctr32[25]_GND_6_o_add_4_OUT> created at line 377.
+    Found 5-bit adder for signal <us_tick[4]_GND_6_o_add_5_OUT> created at line 378.
+    Found 12-bit adder for signal <Filter1_out_converted> created at line 1253.
+    Found 12-bit adder for signal <Filter2_out_converted> created at line 1253.
+    Found 12-bit adder for signal <Filter3_out_converted> created at line 1253.
+    Found 12-bit adder for signal <Filter4_out_converted> created at line 1253.
+    Found 12-bit adder for signal <Filter5_out_converted> created at line 1253.
+    Found 8x6-bit Read Only RAM for signal <_n0198>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred  74 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <DSP_demo> synthesized.
+
+Synthesizing Unit <DCM>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\ipcore_dir\DCM.vhd".
+    Summary:
+	no macro.
+Unit <DCM> synthesized.
+
+Synthesizing Unit <spi_master>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\spi_master.vhd".
+        slaves = 1
+        d_width = 16
+    Found 1-bit register for signal <ss_n>.
+    Found 1-bit register for signal <busy>.
+    Found 16-bit register for signal <rx_data>.
+    Found 1-bit register for signal <mosi_clock_DFF_3_q>.
+    Found 1-bit register for signal <state>.
+    Found 1-bit register for signal <GND_19_o_clock_DFF_62>.
+    Found 1-bit register for signal <continue>.
+    Found 32-bit register for signal <slave>.
+    Found 32-bit register for signal <clk_ratio>.
+    Found 32-bit register for signal <count>.
+    Found 1-bit register for signal <sclk>.
+    Found 1-bit register for signal <assert_data>.
+    Found 16-bit register for signal <tx_buffer>.
+    Found 6-bit register for signal <clk_toggles>.
+    Found 6-bit register for signal <last_bit_rx>.
+    Found 16-bit register for signal <rx_buffer>.
+    Found 7-bit adder for signal <n0179> created at line 103.
+    Found 6-bit adder for signal <clk_toggles[5]_GND_19_o_add_16_OUT> created at line 120.
+    Found 7-bit adder for signal <n0173> created at line 129.
+    Found 32-bit adder for signal <count[31]_GND_19_o_add_32_OUT> created at line 165.
+    Found 6-bit subtractor for signal <GND_19_o_GND_19_o_sub_7_OUT<5:0>> created at line 103.
+    Found 7-bit subtractor for signal <n0142> created at line 142.
+    Found 1-bit tristate buffer for signal <mosi> created at line 65
+    Found 32-bit comparator lessequal for signal <GND_19_o_addr[31]_LessThan_1_o> created at line 87
+    Found 32-bit comparator equal for signal <clk_ratio[31]_count[31]_equal_15_o> created at line 114
+    Found 6-bit comparator lessequal for signal <n0022> created at line 124
+    Found 7-bit comparator greater for signal <GND_19_o_BUS_0003_LessThan_21_o> created at line 129
+    Found 6-bit comparator greater for signal <clk_toggles[5]_last_bit_rx[5]_LessThan_23_o> created at line 134
+    Found 6-bit comparator equal for signal <last_bit_rx[5]_clk_toggles[5]_equal_25_o> created at line 140
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred 164 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred  16 Multiplexer(s).
+	inferred   1 Tristate(s).
+Unit <spi_master> synthesized.
+
+Synthesizing Unit <AD7685_Interface_v2>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\AD7865_Interface_v1.vhd".
+    Found 1-bit register for signal <Trigger_out>.
+    Found 1-bit register for signal <ADC_CLK>.
+    Found 1-bit register for signal <ADC_CONV>.
+    Found 16-bit register for signal <ADCvalue>.
+    Found 7-bit register for signal <counter>.
+    Found 7-bit adder for signal <counter[6]_GND_152_o_add_1_OUT> created at line 48.
+    Found 128x1-bit Read Only RAM for signal <counter[6]_GND_152_o_Mux_5_o>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred  15 Multiplexer(s).
+Unit <AD7685_Interface_v2> synthesized.
+
+Synthesizing Unit <RS232_Interface_v1>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo_code\RS232_Interface_v1.vhd".
+        clk_rate = 32000000
+        baud_rate = 57600
+    Found 3-bit register for signal <tra_sync>.
+    Found 1-bit register for signal <rs232_rec_en>.
+    Found 10-bit register for signal <rec_cnt>.
+    Found 2-bit register for signal <rec_state>.
+    Found 3-bit register for signal <rec_bit_cnt>.
+    Found 8-bit register for signal <rec_byte_reg>.
+    Found 8-bit register for signal <tra_byte_reg>.
+    Found 10-bit register for signal <tra_cnt>.
+    Found 1-bit register for signal <tra_en>.
+    Found 1-bit register for signal <rs232_txd>.
+    Found 2-bit register for signal <tra_state>.
+    Found 3-bit register for signal <tra_bit_cnt>.
+    Found 3-bit register for signal <rec_sync>.
+    Found finite state machine <FSM_0> for signal <rec_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | start_bit                                      |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <tra_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | start_bit                                      |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <rec_bit_cnt[2]_GND_153_o_add_5_OUT> created at line 88.
+    Found 3-bit adder for signal <tra_bit_cnt[2]_GND_153_o_add_37_OUT> created at line 128.
+    Found 10-bit subtractor for signal <GND_153_o_GND_153_o_sub_15_OUT<9:0>> created at line 97.
+    Found 10-bit subtractor for signal <GND_153_o_GND_153_o_sub_45_OUT<9:0>> created at line 136.
+    Found 10-bit 3-to-1 multiplexer for signal <rec_state[1]_X_19_o_wide_mux_18_OUT> created at line 78.
+    Found 10-bit 3-to-1 multiplexer for signal <tra_state[1]_X_19_o_wide_mux_48_OUT> created at line 109.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred  17 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <RS232_Interface_v1> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 128x1-bit single-port Read Only RAM                   : 2
+ 8x6-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 26
+ 10-bit subtractor                                     : 2
+ 12-bit adder                                          : 5
+ 26-bit adder                                          : 1
+ 3-bit adder                                           : 3
+ 32-bit adder                                          : 2
+ 5-bit adder                                           : 1
+ 6-bit adder                                           : 2
+ 6-bit subtractor                                      : 2
+ 7-bit adder                                           : 6
+ 7-bit subtractor                                      : 2
+# Registers                                            : 60
+ 1-bit register                                        : 27
+ 10-bit register                                       : 2
+ 16-bit register                                       : 10
+ 26-bit register                                       : 1
+ 3-bit register                                        : 5
+ 32-bit register                                       : 6
+ 5-bit register                                        : 1
+ 6-bit register                                        : 5
+ 7-bit register                                        : 2
+ 8-bit register                                        : 1
+# Comparators                                          : 12
+ 32-bit comparator equal                               : 2
+ 32-bit comparator lessequal                           : 2
+ 6-bit comparator equal                                : 2
+ 6-bit comparator greater                              : 2
+ 6-bit comparator lessequal                            : 2
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 84
+ 1-bit 2-to-1 multiplexer                              : 30
+ 10-bit 2-to-1 multiplexer                             : 5
+ 10-bit 3-to-1 multiplexer                             : 2
+ 16-bit 2-to-1 multiplexer                             : 39
+ 32-bit 2-to-1 multiplexer                             : 6
+ 6-bit 2-to-1 multiplexer                              : 2
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/Filter1.ngc>.
+Reading core <ipcore_dir/Filter2.ngc>.
+Reading core <ipcore_dir/Filter3.ngc>.
+Reading core <ipcore_dir/Filter4.ngc>.
+Reading core <ipcore_dir/Filter5.ngc>.
+Loading core <Filter1> for timing and area information for instance <LP50Hz>.
+Loading core <Filter2> for timing and area information for instance <HP4000Hz>.
+Loading core <Filter3> for timing and area information for instance <BP1500Hz>.
+Loading core <Filter4> for timing and area information for instance <BS1500Hz>.
+Loading core <Filter5> for timing and area information for instance <BP250Hz_650Hz>.
+WARNING:Xst:1426 - The value init of the FF/Latch tra_sync_0 hinder the constant cleaning in the block UART1.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <slave_0> has a constant value of 0 in block <DAC1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <slave_0> has a constant value of 0 in block <DAC2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2out_12> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2out_13> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2out_14> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2out_15> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <slave_1> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_2> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_3> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_4> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_5> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_6> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_7> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_8> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_9> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_10> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_11> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_12> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_13> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_14> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_15> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_16> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_17> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_18> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_19> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_20> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_21> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_22> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_23> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_24> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_25> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_26> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_27> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_28> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_29> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_30> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_31> of sequential type is unconnected in block <DAC1>.
+WARNING:Xst:2677 - Node <slave_1> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_2> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_3> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_4> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_5> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_6> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_7> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_8> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_9> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_10> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_11> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_12> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_13> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_14> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_15> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_16> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_17> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_18> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_19> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_20> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_21> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_22> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_23> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_24> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_25> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_26> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_27> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_28> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_29> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_30> of sequential type is unconnected in block <DAC2>.
+WARNING:Xst:2677 - Node <slave_31> of sequential type is unconnected in block <DAC2>.
+
+Synthesizing (advanced) Unit <AD7685_Interface_v2>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+INFO:Xst:3231 - The small RAM <Mram_counter[6]_GND_152_o_Mux_5_o> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 1-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <counter>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <AD7685_Interface_v2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <DSP_demo>.
+The following registers are absorbed into counter <Filter_select>: 1 register on signal <Filter_select>.
+The following registers are absorbed into counter <ctr32>: 1 register on signal <ctr32>.
+The following registers are absorbed into counter <us_tick>: 1 register on signal <us_tick>.
+INFO:Xst:3231 - The small RAM <Mram__n0198> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 6-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Filter_select> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <DSP_demo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RS232_Interface_v1>.
+The following registers are absorbed into counter <rec_bit_cnt>: 1 register on signal <rec_bit_cnt>.
+The following registers are absorbed into counter <tra_bit_cnt>: 1 register on signal <tra_bit_cnt>.
+Unit <RS232_Interface_v1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spi_master>.
+The following registers are absorbed into counter <clk_toggles>: 1 register on signal <clk_toggles>.
+Unit <spi_master> synthesized (advanced).
+WARNING:Xst:2677 - Node <slave_1> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_2> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_3> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_4> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_5> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_6> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_7> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_8> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_9> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_10> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_11> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_12> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_13> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_14> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_15> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_16> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_17> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_18> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_19> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_20> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_21> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_22> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_23> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_24> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_25> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_26> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_27> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_28> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_29> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_30> of sequential type is unconnected in block <spi_master>.
+WARNING:Xst:2677 - Node <slave_31> of sequential type is unconnected in block <spi_master>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 128x1-bit single-port distributed Read Only RAM       : 2
+ 8x6-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 17
+ 10-bit subtractor                                     : 2
+ 12-bit adder                                          : 5
+ 32-bit adder                                          : 2
+ 6-bit adder                                           : 2
+ 6-bit subtractor                                      : 4
+ 7-bit adder                                           : 2
+# Counters                                             : 9
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 3
+ 5-bit up counter                                      : 1
+ 6-bit up counter                                      : 2
+ 7-bit up counter                                      : 2
+# Registers                                            : 369
+ Flip-Flops                                            : 369
+# Comparators                                          : 12
+ 32-bit comparator equal                               : 2
+ 32-bit comparator lessequal                           : 2
+ 6-bit comparator equal                                : 2
+ 6-bit comparator greater                              : 2
+ 6-bit comparator lessequal                            : 2
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 80
+ 1-bit 2-to-1 multiplexer                              : 28
+ 10-bit 2-to-1 multiplexer                             : 5
+ 10-bit 3-to-1 multiplexer                             : 2
+ 16-bit 2-to-1 multiplexer                             : 39
+ 32-bit 2-to-1 multiplexer                             : 6
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch tra_sync_0 hinder the constant cleaning in the block RS232_Interface_v1.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <DAC2out_12> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2out_13> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2out_14> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2out_15> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <DAC2enable> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <DAC1enable> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <UART1/FSM_0> on signal <rec_state[1:2]> with user encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ start_bit | 00
+ data_byte | 01
+ stop_bit  | 10
+-----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <UART1/FSM_1> on signal <tra_state[1:2]> with user encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ start_bit | 00
+ data_byte | 01
+ stop_bit  | 10
+-----------------------
+WARNING:Xst:1293 - FF/Latch <DAC1out_12> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1out_13> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1out_14> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1out_15> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <last_bit_rx_0> in Unit <spi_master> is equivalent to the following 4 FFs/Latches, which will be removed : <last_bit_rx_1> <last_bit_rx_2> <last_bit_rx_3> <last_bit_rx_4> 
+WARNING:Xst:1426 - The value init of the FF/Latch DAC1/last_bit_rx_5 hinder the constant cleaning in the block DSP_demo.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch DAC2/last_bit_rx_5 hinder the constant cleaning in the block DSP_demo.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_16> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_17> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_18> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_19> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_20> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_21> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_22> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_23> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_24> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_25> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_26> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_27> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_28> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_29> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_30> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_31> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/last_bit_rx_0> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/slave_0> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_0> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_1> (without init value) has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_2> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_3> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_4> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_5> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_6> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_7> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_8> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_9> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_10> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_11> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_12> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_13> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_14> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC1/clk_ratio_15> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_16> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_17> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_18> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_19> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_20> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_21> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_22> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_23> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_24> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_25> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_26> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_27> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_28> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_29> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_30> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_31> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/last_bit_rx_0> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/slave_0> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_0> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_1> (without init value) has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_2> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_3> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_4> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_5> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_6> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_7> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_8> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_9> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_10> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_11> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_12> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_13> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_14> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DAC2/clk_ratio_15> (without init value) has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <DAC2/busy> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_15> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_14> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_13> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_12> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_11> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_10> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_9> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_8> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_7> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_6> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_5> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_4> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_3> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_2> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_1> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_data_0> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/continue> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_15> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_14> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_13> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_12> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_11> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_10> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_9> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_8> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_7> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_6> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_5> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_4> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_3> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_2> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_1> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC2/rx_buffer_0> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/busy> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_15> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_14> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_13> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_12> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_11> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_10> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_9> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_8> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_7> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_6> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_5> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_4> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_3> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_2> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_1> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_data_0> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/continue> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_15> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_14> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_13> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_12> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_11> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_10> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_9> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_8> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_7> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_6> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_5> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_4> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_3> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_2> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_1> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <DAC1/rx_buffer_0> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2042 - Unit DSP_demo: 2 internal tristates are replaced by logic (pull-up yes): N10, N11.
+
+Optimizing unit <DSP_demo> ...
+
+Optimizing unit <AD7685_Interface_v2> ...
+
+Optimizing unit <RS232_Interface_v1> ...
+WARNING:Xst:2677 - Node <ADC2/ADCvalue_3> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <ADC2/ADCvalue_2> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <ADC2/ADCvalue_1> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <ADC2/ADCvalue_0> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <ADC2/Trigger_out> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <ADC1/Trigger_out> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <UART1/rec_byte_reg_7> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <UART1/rec_byte_reg_6> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <UART1/rec_byte_reg_5> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <UART1/rec_byte_reg_4> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <UART1/rec_byte_reg_3> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <UART1/rec_byte_reg_2> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <UART1/rec_byte_reg_1> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:2677 - Node <UART1/rec_byte_reg_0> of sequential type is unconnected in block <DSP_demo>.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_4> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_5> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_6> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_7> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_8> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_9> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_10> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_11> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_12> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_13> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_14> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_15> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_16> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_17> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_18> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_19> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_20> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_21> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/rs232_txd> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_en> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_cnt_0> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_cnt_1> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_cnt_2> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_cnt_3> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_cnt_4> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_cnt_5> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_cnt_6> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_cnt_7> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_cnt_8> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_cnt_9> has a constant value of 1 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_state_FSM_FFd2> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_state_FSM_FFd1> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_bit_cnt_0> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_bit_cnt_1> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <UART1/tra_bit_cnt_2> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_2> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_3> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_12> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_13> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_14> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_15> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_16> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_17> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_18> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_19> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_20> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_21> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_22> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_23> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_24> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_25> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_26> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_27> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_28> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_29> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_30> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_22> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_23> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_24> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_25> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_26> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_27> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_28> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_29> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC1/count_30> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_2> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_3> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_4> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_5> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_6> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_7> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_8> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_9> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_10> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DAC2/count_11> has a constant value of 0 in block <DSP_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <UART1/tra_sync_0> is unconnected in block <DSP_demo>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <UART1/tra_sync_1> is unconnected in block <DSP_demo>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <UART1/tra_sync_2> is unconnected in block <DSP_demo>.
+INFO:Xst:2261 - The FF/Latch <ctr32_0> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <us_tick_0> 
+INFO:Xst:2261 - The FF/Latch <ctr32_1> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <us_tick_1> 
+INFO:Xst:2261 - The FF/Latch <ctr32_2> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <us_tick_2> 
+INFO:Xst:2261 - The FF/Latch <ctr32_3> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <us_tick_3> 
+INFO:Xst:2261 - The FF/Latch <ctr32_4> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <us_tick_4> 
+INFO:Xst:2261 - The FF/Latch <DAC2/count_31> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <DAC1/count_31> 
+INFO:Xst:2261 - The FF/Latch <DAC2/GND_19_o_clock_DFF_62> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <DAC1/GND_19_o_clock_DFF_62> 
+INFO:Xst:2261 - The FF/Latch <DAC2/state> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <DAC1/state> 
+INFO:Xst:2261 - The FF/Latch <ADC2/counter_0> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <ADC1/counter_0> 
+INFO:Xst:2261 - The FF/Latch <ADC2/counter_1> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <ADC1/counter_1> 
+INFO:Xst:2261 - The FF/Latch <ADC2/counter_2> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <ADC1/counter_2> 
+INFO:Xst:2261 - The FF/Latch <ADC2/counter_3> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <ADC1/counter_3> 
+INFO:Xst:2261 - The FF/Latch <ADC2/counter_4> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <ADC1/counter_4> 
+INFO:Xst:2261 - The FF/Latch <ADC2/counter_5> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <ADC1/counter_5> 
+INFO:Xst:2261 - The FF/Latch <ADC2/counter_6> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <ADC1/counter_6> 
+INFO:Xst:2261 - The FF/Latch <ADC2/ADC_CONV> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <ADC1/ADC_CONV> 
+INFO:Xst:2261 - The FF/Latch <DAC2/count_0> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <DAC1/count_0> 
+INFO:Xst:2261 - The FF/Latch <DAC2/count_1> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <DAC1/count_1> 
+INFO:Xst:2261 - The FF/Latch <ADC2/ADC_CLK> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <ADC1/ADC_CLK> 
+INFO:Xst:2261 - The FF/Latch <DAC2/ss_n_0> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <DAC1/ss_n_0> 
+INFO:Xst:2261 - The FF/Latch <DAC2/sclk> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <DAC1/sclk> 
+INFO:Xst:2261 - The FF/Latch <DAC2/clk_toggles_0> in Unit <DSP_demo> is equivalent to the following 3 FFs/Latches, which will be removed : <DAC2/assert_data> <DAC1/clk_toggles_0> <DAC1/assert_data> 
+INFO:Xst:2261 - The FF/Latch <DAC2/clk_toggles_1> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <DAC1/clk_toggles_1> 
+INFO:Xst:2261 - The FF/Latch <DAC2/clk_toggles_2> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <DAC1/clk_toggles_2> 
+INFO:Xst:2261 - The FF/Latch <DAC2/clk_toggles_3> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <DAC1/clk_toggles_3> 
+INFO:Xst:2261 - The FF/Latch <DAC2/clk_toggles_4> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <DAC1/clk_toggles_4> 
+INFO:Xst:2261 - The FF/Latch <DAC2/clk_toggles_5> in Unit <DSP_demo> is equivalent to the following FF/Latch, which will be removed : <DAC1/clk_toggles_5> 
+INFO:Xst:3203 - The FF/Latch <DAC2/count_31> in Unit <DSP_demo> is the opposite to the following 2 FFs/Latches, which will be removed : <DAC2/last_bit_rx_5> <DAC1/last_bit_rx_5> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DSP_demo, actual ratio is 9.
+INFO:Xst:2260 - The FF/Latch <blk00000015> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00000154> 
+INFO:Xst:2260 - The FF/Latch <blk00000014> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00000015> 
+INFO:Xst:2260 - The FF/Latch <blk0000008c> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00000139> 
+INFO:Xst:2260 - The FF/Latch <blk00000011> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk0000014c> 
+INFO:Xst:2260 - The FF/Latch <blk00000015> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00000154> 
+INFO:Xst:2260 - The FF/Latch <blk00000015> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00000154> 
+INFO:Xst:2260 - The FF/Latch <blk00000014> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00000015> 
+INFO:Xst:2260 - The FF/Latch <blk0000008c> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00000139> 
+INFO:Xst:2260 - The FF/Latch <blk00000014> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00000015> 
+INFO:Xst:2260 - The FF/Latch <blk0000008c> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00000139> 
+INFO:Xst:2260 - The FF/Latch <blk00000011> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk0000014c> 
+INFO:Xst:2260 - The FF/Latch <blk00000011> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk0000014c> 
+FlipFlop DAC2/state has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <DSP_demo> :
+	Found 2-bit shift register for signal <UART1/rec_sync_1>.
+Unit <DSP_demo> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 162
+ Flip-Flops                                            : 162
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : DSP_demo.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1291
+#      GND                         : 8
+#      INV                         : 12
+#      LUT1                        : 111
+#      LUT2                        : 78
+#      LUT3                        : 288
+#      LUT4                        : 45
+#      LUT5                        : 103
+#      LUT6                        : 93
+#      MUXCY                       : 83
+#      MUXCY_D                     : 35
+#      MUXCY_L                     : 149
+#      MUXF7                       : 65
+#      VCC                         : 8
+#      XORCY                       : 213
+# FlipFlops/Latches                : 998
+#      FD                          : 381
+#      FDE                         : 380
+#      FDR                         : 3
+#      FDRE                        : 224
+#      FDSE                        : 10
+# RAMS                             : 2
+#      RAMB8BWER                   : 2
+# Shift Registers                  : 354
+#      SRLC16E                     : 194
+#      SRLC32E                     : 160
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 30
+#      IBUF                        : 3
+#      IBUFG                       : 1
+#      OBUF                        : 24
+#      OBUFT                       : 2
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# DSPs                             : 5
+#      DSP48A1                     : 5
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             998  out of  11440     8%  
+ Number of Slice LUTs:                 1084  out of   5720    18%  
+    Number used as Logic:               730  out of   5720    12%  
+    Number used as Memory:              354  out of   1440    24%  
+       Number used as SRL:              354
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1278
+   Number with an unused Flip Flop:     280  out of   1278    21%  
+   Number with an unused LUT:           194  out of   1278    15%  
+   Number of fully used LUT-FF pairs:   804  out of   1278    62%  
+   Number of unique control sets:        41
+
+IO Utilization: 
+ Number of IOs:                          32
+ Number of bonded IOBs:                  30  out of    102    29%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of DSP48A1s:                      5  out of     16    31%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | DCM_SP:CLK0            | 1319  |
+UART1/rs232_rec_en                 | NONE(Filter_select_0)  | 3     |
+clk                                | DCM_SP:CLKFX           | 37    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.860ns (Maximum Frequency: 205.761MHz)
+   Minimum input arrival time before clock: 3.783ns
+   Maximum output required time after clock: 5.220ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.860ns (frequency: 205.761MHz)
+  Total number of paths / destination ports: 7647 / 2901
+-------------------------------------------------------------------------
+Delay:               4.860ns (Levels of Logic = 2)
+  Source:            ctr32_0 (FF)
+  Destination:       DAC1out_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ctr32_0 to DAC1out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.525   1.196  ctr32_0 (ctr32_0)
+     LUT5:I0->O           19   0.254   1.261  us_tick[4]_GND_6_o_equal_7_o<4>1 (us_tick[4]_GND_6_o_equal_7_o)
+     LUT3:I2->O           12   0.254   1.068  _n0163_inv1 (_n0163_inv)
+     FDE:CE                    0.302          DAC1out_0
+    ----------------------------------------
+    Total                      4.860ns (1.335ns logic, 3.525ns route)
+                                       (27.5% logic, 72.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'UART1/rs232_rec_en'
+  Clock period: 3.778ns (frequency: 264.662MHz)
+  Total number of paths / destination ports: 15 / 6
+-------------------------------------------------------------------------
+Delay:               3.778ns (Levels of Logic = 1)
+  Source:            Filter_select_0 (FF)
+  Destination:       Filter_select_0 (FF)
+  Source Clock:      UART1/rs232_rec_en rising
+  Destination Clock: UART1/rs232_rec_en rising
+
+  Data Path: Filter_select_0 to Filter_select_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             45   0.525   1.737  Filter_select_0 (Filter_select_0)
+     LUT3:I2->O            4   0.254   0.803  Mram__n01981 (Mram__n0198)
+     FDR:R                     0.459          Filter_select_0
+    ----------------------------------------
+    Total                      3.778ns (1.238ns logic, 2.540ns route)
+                                       (32.8% logic, 67.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 30 / 29
+-------------------------------------------------------------------------
+Offset:              3.783ns (Levels of Logic = 3)
+  Source:            ADC1_DATA (PAD)
+  Destination:       ADC1/ADCvalue_14 (FF)
+  Destination Clock: clk rising 0.6X
+
+  Data Path: ADC1_DATA to ADC1/ADCvalue_14
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.328   1.069  ADC1_DATA_IBUF (ADC1_DATA_IBUF)
+     LUT4:I3->O            4   0.254   0.804  ADC1/Mmux_counter[6]_ADCvalue[15]_wide_mux_4_OUT1511 (ADC1/Mmux_counter[6]_ADCvalue[15]_wide_mux_4_OUT151)
+     LUT6:I5->O            1   0.254   0.000  ADC1/Mmux_counter[6]_ADCvalue[15]_wide_mux_4_OUT21 (ADC1/counter[6]_ADCvalue[15]_wide_mux_4_OUT<10>)
+     FDE:D                     0.074          ADC1/ADCvalue_10
+    ----------------------------------------
+    Total                      3.783ns (1.910ns logic, 1.873ns route)
+                                       (50.5% logic, 49.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 23 / 21
+-------------------------------------------------------------------------
+Offset:              5.220ns (Levels of Logic = 2)
+  Source:            DAC2/GND_19_o_clock_DFF_62 (FF)
+  Destination:       DAC1_SDI (PAD)
+  Source Clock:      clk rising
+
+  Data Path: DAC2/GND_19_o_clock_DFF_62 to DAC1_SDI
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.525   0.803  DAC2/GND_19_o_clock_DFF_62 (DAC2/GND_19_o_clock_DFF_62)
+     INV:I->O              2   0.255   0.725  DAC2/GND_19_o_clock_DFF_62_inv1_INV_0 (DAC1/GND_19_o_clock_DFF_62_inv)
+     OBUFT:T->O                2.912          DAC1_SDI_OBUFT (DAC1_SDI)
+    ----------------------------------------
+    Total                      5.220ns (3.692ns logic, 1.528ns route)
+                                       (70.7% logic, 29.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock UART1/rs232_rec_en
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+UART1/rs232_rec_en|    3.778|         |         |         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+UART1/rs232_rec_en|    4.011|         |         |         |
+clk               |    5.513|         |         |         |
+------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.33 secs
+ 
+--> 
+
+Total memory usage is 182592 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  346 (   0 filtered)
+Number of infos    :   64 (   0 filtered)
+

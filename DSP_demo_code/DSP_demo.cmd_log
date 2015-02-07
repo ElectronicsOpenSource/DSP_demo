@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/Felix/Google Drive/OSPESA/DSP_demo_code/DSP_demo.xst" -ofn "C:/Users/Felix/Google Drive/OSPESA/DSP_demo_code/DSP_demo.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "DSP_demo.ngc" DSP_demo.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DSP_demo_map.ncd DSP_demo.ngd DSP_demo.pcf 
+par -w -intstyle ise -ol high -mt off DSP_demo_map.ncd DSP_demo.ncd DSP_demo.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DSP_demo.twx DSP_demo.ncd -o DSP_demo.twr DSP_demo.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f DSP_demo.ut DSP_demo.ncd 

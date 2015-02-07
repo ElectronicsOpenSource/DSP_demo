@@ -1,0 +1,1287 @@
+Release 14.7 Map P.20131013 (nt)
+Xilinx Mapping Report File for Design 'DSP_demo'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o DSP_demo_map.ncd DSP_demo.ngd DSP_demo.pcf 
+Target Device  : xc6slx9
+Target Package : tqg144
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Sat Feb 07 12:57:05 2015
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    1
+Slice Logic Utilization:
+  Number of Slice Registers:                   866 out of  11,440    7%
+    Number used as Flip Flops:                 866
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        852 out of   5,720   14%
+    Number used as logic:                      502 out of   5,720    8%
+      Number using O6 output only:             382
+      Number using O5 output only:              28
+      Number using O5 and O6:                   92
+      Number used as ROM:                        0
+    Number used as Memory:                     260 out of   1,440   18%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           260
+        Number using O6 output only:           166
+        Number using O5 output only:             0
+        Number using O5 and O6:                 94
+    Number used exclusively as route-thrus:     90
+      Number with same-slice register load:      9
+      Number with same-slice carry load:        81
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   310 out of   1,430   21%
+  Number of MUXCYs used:                       364 out of   2,860   12%
+  Number of LUT Flip Flop pairs used:          902
+    Number with an unused Flip Flop:           169 out of     902   18%
+    Number with an unused LUT:                  50 out of     902    5%
+    Number of fully used LUT-FF pairs:         683 out of     902   75%
+    Number of unique control sets:              22
+    Number of slice register sites lost
+      to control set restrictions:              44 out of  11,440    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        30 out of     102   29%
+    Number of LOCed IOBs:                       30 out of      30  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          2 out of      64    3%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       4   25%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            5 out of      16   31%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                3.58
+
+Peak Memory Usage:  273 MB
+Total REAL time to MAP completion:  19 secs 
+Total CPU time to MAP completion:   18 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network DAC1_miso has no load.
+INFO:LIT:395 - The above info message is repeated 41 more times for the
+   following (max. 5 shown):
+   DAC2_miso,
+   LP50Hz/rdy,
+   LP50Hz/blk00000003/blk0000000b/LO,
+   LP50Hz/blk00000003/blk0000002e/LO,
+   LP50Hz/blk00000003/blk0000003e/LO
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:159 - Net Timing constraints on signal clk are pushed forward
+   through input buffer.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp DCM_Global/dcm_sp_inst,
+   consult the device Data Sheet.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 327 block(s) removed
+  16 block(s) optimized away
+ 423 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "BP1500Hz/blk00000003/blk0000000c" (MUX) removed.
+Loadless block "BP250Hz_650Hz/blk00000003/blk0000000c" (MUX) removed.
+Loadless block "BP250Hz_650Hz/blk00000003/blk00000017" (SFF) removed.
+Loadless block "BS1500Hz/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "BS1500Hz/blk00000003/blk00000017" (SFF) removed.
+Loadless block "HP4000Hz/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "HP4000Hz/blk00000003/blk0000001b" (SFF) removed.
+Loadless block "LP50Hz/blk00000003/blk0000000c" (MUX) removed.
+Loadless block "LP50Hz/blk00000003/blk00000017" (SFF) removed.
+The signal "LP50Hz/rdy" is sourceless and has been removed.
+The signal "LP50Hz/dout<23>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000174" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000186" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk0000012d" (SFF) removed.
+The signal "LP50Hz/dout<22>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000173" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000185" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk0000012c" (SFF) removed.
+The signal "LP50Hz/dout<21>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000172" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000184" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk0000012b" (SFF) removed.
+The signal "LP50Hz/dout<20>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000171" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000183" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk0000012a" (SFF) removed.
+The signal "LP50Hz/dout<19>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000170" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000182" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000129" (SFF) removed.
+The signal "LP50Hz/dout<18>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk0000016e" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000181" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000128" (SFF) removed.
+The signal "LP50Hz/dout<17>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk0000016f" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000180" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000127" (SFF) removed.
+The signal "LP50Hz/dout<16>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk0000016d" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig0000017f" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000126" (SFF) removed.
+The signal "LP50Hz/dout<15>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk0000016c" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig0000017e" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000125" (SFF) removed.
+The signal "LP50Hz/dout<14>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk0000016b" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig0000017d" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000124" (SFF) removed.
+The signal "LP50Hz/dout<13>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000169" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig0000017c" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000123" (SFF) removed.
+The signal "LP50Hz/dout<12>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk0000016a" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig0000017b" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000122" (SFF) removed.
+The signal "LP50Hz/dout<11>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000168" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig0000017a" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000121" (SFF) removed.
+The signal "LP50Hz/dout<10>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000167" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000179" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000120" (SFF) removed.
+The signal "LP50Hz/dout<9>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000166" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000178" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk0000011f" (SFF) removed.
+The signal "LP50Hz/dout<8>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000165" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000177" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk0000011e" (SFF) removed.
+The signal "LP50Hz/dout<7>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000164" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000176" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk0000011d" (SFF) removed.
+The signal "LP50Hz/dout<6>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000163" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000175" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk0000011c" (SFF) removed.
+The signal "LP50Hz/dout<5>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000162" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000174" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk0000011b" (SFF) removed.
+The signal "LP50Hz/dout<4>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000160" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000173" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk0000011a" (SFF) removed.
+The signal "LP50Hz/dout<3>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000161" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000172" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000119" (SFF) removed.
+The signal "LP50Hz/dout<2>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk0000015f" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000171" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000118" (SFF) removed.
+The signal "LP50Hz/dout<1>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk0000015e" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000170" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000117" (SFF) removed.
+The signal "LP50Hz/dout<0>" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk0000015d" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig0000016f" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk00000116" (SFF) removed.
+The signal "LP50Hz/blk00000003/sig00000013" is sourceless and has been removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000181" (ROM) removed.
+  The signal "LP50Hz/blk00000003/sig00000193" is sourceless and has been removed.
+   Sourceless block "LP50Hz/blk00000003/blk0000013a" (SFF) removed.
+The signal "LP50Hz/blk00000003/sig00000057" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig00000058" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig00000059" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig0000005a" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig0000005b" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig0000005c" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig0000005d" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig0000005e" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig0000005f" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig00000060" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig00000061" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig00000062" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig00000063" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig00000064" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig00000065" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig00000066" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig00000067" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig00000068" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig00000069" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig0000006a" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig0000006b" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig0000006c" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig0000006d" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/sig0000006e" is sourceless and has been removed.
+The signal "LP50Hz/blk00000003/blk0000000b/LO" is sourceless and has been
+removed.
+The signal "LP50Hz/blk00000003/blk0000002e/LO" is sourceless and has been
+removed.
+The signal "LP50Hz/blk00000003/blk0000002e/O" is sourceless and has been
+removed.
+ Sourceless block "LP50Hz/blk00000003/blk0000002e/MUXCY_D_BUF" (BUF) removed.
+The signal "LP50Hz/blk00000003/blk0000003e/LO" is sourceless and has been
+removed.
+The signal "LP50Hz/blk00000003/blk00000048/LO" is sourceless and has been
+removed.
+The signal "LP50Hz/blk00000003/blk00000048/O" is sourceless and has been
+removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000048/MUXCY_D_BUF" (BUF) removed.
+The signal "LP50Hz/blk00000003/blk00000055/LO" is sourceless and has been
+removed.
+The signal "LP50Hz/blk00000003/blk00000055/O" is sourceless and has been
+removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000055/MUXCY_D_BUF" (BUF) removed.
+The signal "LP50Hz/blk00000003/blk00000061/LO" is sourceless and has been
+removed.
+The signal "LP50Hz/blk00000003/blk00000061/O" is sourceless and has been
+removed.
+ Sourceless block "LP50Hz/blk00000003/blk00000061/MUXCY_D_BUF" (BUF) removed.
+The signal "LP50Hz/blk00000003/blk0000006c/LO" is sourceless and has been
+removed.
+The signal "LP50Hz/blk00000003/blk0000006c/O" is sourceless and has been
+removed.
+ Sourceless block "LP50Hz/blk00000003/blk0000006c/MUXCY_D_BUF" (BUF) removed.
+The signal "HP4000Hz/rdy" is sourceless and has been removed.
+The signal "HP4000Hz/dout<21>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000118" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig0000015d" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000d8" (SFF) removed.
+The signal "HP4000Hz/dout<20>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000117" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig0000015c" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000d7" (SFF) removed.
+The signal "HP4000Hz/dout<19>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000116" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig0000015b" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000d6" (SFF) removed.
+The signal "HP4000Hz/dout<18>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000115" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig0000015a" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000d5" (SFF) removed.
+The signal "HP4000Hz/dout<17>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000113" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig00000159" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000d4" (SFF) removed.
+The signal "HP4000Hz/dout<16>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000114" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig00000158" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000d3" (SFF) removed.
+The signal "HP4000Hz/dout<15>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000112" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig00000157" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000d2" (SFF) removed.
+The signal "HP4000Hz/dout<14>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000111" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig00000156" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000d1" (SFF) removed.
+The signal "HP4000Hz/dout<13>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000110" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig00000155" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000d0" (SFF) removed.
+The signal "HP4000Hz/dout<12>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk0000010f" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig00000154" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000cf" (SFF) removed.
+The signal "HP4000Hz/dout<11>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk0000010e" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig00000153" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000ce" (SFF) removed.
+The signal "HP4000Hz/dout<10>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk0000010d" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig00000152" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000cd" (SFF) removed.
+The signal "HP4000Hz/dout<9>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk0000010c" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig00000151" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000cc" (SFF) removed.
+The signal "HP4000Hz/dout<8>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk0000010a" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig00000150" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000cb" (SFF) removed.
+The signal "HP4000Hz/dout<7>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk0000010b" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig0000014f" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000ca" (SFF) removed.
+The signal "HP4000Hz/dout<6>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000109" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig0000014e" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000c9" (SFF) removed.
+The signal "HP4000Hz/dout<5>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000108" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig0000014d" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000c8" (SFF) removed.
+The signal "HP4000Hz/dout<4>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000107" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig0000014c" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000c7" (SFF) removed.
+The signal "HP4000Hz/dout<3>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000106" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig0000014b" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000c6" (SFF) removed.
+The signal "HP4000Hz/dout<2>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000105" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig0000014a" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000c5" (SFF) removed.
+The signal "HP4000Hz/dout<1>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000104" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig00000149" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000c4" (SFF) removed.
+The signal "HP4000Hz/dout<0>" is sourceless and has been removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000103" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig00000148" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000c3" (SFF) removed.
+The signal "HP4000Hz/blk00000003/sig00000013" is sourceless and has been
+removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000125" (ROM) removed.
+  The signal "HP4000Hz/blk00000003/sig0000016a" is sourceless and has been
+removed.
+   Sourceless block "HP4000Hz/blk00000003/blk000000e5" (SFF) removed.
+The signal "HP4000Hz/blk00000003/sig00000055" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000056" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000057" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000058" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000059" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig0000005a" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig0000005b" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig0000005c" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig0000005d" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig0000005e" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig0000005f" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000060" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000061" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000062" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000063" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000064" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000065" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000066" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000067" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000068" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig00000069" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig0000006a" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/sig000000a4" is sourceless and has been
+removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000023" (FF) removed.
+The signal "HP4000Hz/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/blk0000000e/LO" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/blk0000002f/LO" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/blk0000002f/O" is sourceless and has been
+removed.
+ Sourceless block "HP4000Hz/blk00000003/blk0000002f/MUXCY_D_BUF" (BUF) removed.
+The signal "HP4000Hz/blk00000003/blk0000003e/LO" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/blk0000003e/O" is sourceless and has been
+removed.
+ Sourceless block "HP4000Hz/blk00000003/blk0000003e/MUXCY_D_BUF" (BUF) removed.
+The signal "HP4000Hz/blk00000003/blk00000049/LO" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/blk00000049/O" is sourceless and has been
+removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000049/MUXCY_D_BUF" (BUF) removed.
+The signal "HP4000Hz/blk00000003/blk00000053/LO" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/blk00000053/O" is sourceless and has been
+removed.
+ Sourceless block "HP4000Hz/blk00000003/blk00000053/MUXCY_D_BUF" (BUF) removed.
+The signal "HP4000Hz/blk00000003/blk0000005c/LO" is sourceless and has been
+removed.
+The signal "HP4000Hz/blk00000003/blk0000005c/O" is sourceless and has been
+removed.
+ Sourceless block "HP4000Hz/blk00000003/blk0000005c/MUXCY_D_BUF" (BUF) removed.
+The signal "BP1500Hz/rdy" is sourceless and has been removed.
+The signal "BP1500Hz/dout<24>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000ec" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig00000191" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk000000a5" (SFF) removed.
+The signal "BP1500Hz/dout<23>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000ea" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig00000190" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk000000a4" (SFF) removed.
+The signal "BP1500Hz/dout<22>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000eb" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig0000018f" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk000000a3" (SFF) removed.
+The signal "BP1500Hz/dout<21>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000e9" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig0000018e" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk000000a2" (SFF) removed.
+The signal "BP1500Hz/dout<20>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000e8" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig0000018d" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk000000a1" (SFF) removed.
+The signal "BP1500Hz/dout<19>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000e7" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig0000018c" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk000000a0" (SFF) removed.
+The signal "BP1500Hz/dout<18>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000e6" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig0000018b" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk0000009f" (SFF) removed.
+The signal "BP1500Hz/dout<17>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000e5" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig0000018a" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk0000009e" (SFF) removed.
+The signal "BP1500Hz/dout<16>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000e3" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig00000189" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk0000009d" (SFF) removed.
+The signal "BP1500Hz/dout<15>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000e4" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig00000188" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk0000009c" (SFF) removed.
+The signal "BP1500Hz/dout<14>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000e2" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig00000187" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk0000009b" (SFF) removed.
+The signal "BP1500Hz/dout<13>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000e1" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig00000186" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk0000009a" (SFF) removed.
+The signal "BP1500Hz/dout<12>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000e0" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig00000185" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk00000099" (SFF) removed.
+The signal "BP1500Hz/dout<11>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000df" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig00000184" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk00000098" (SFF) removed.
+The signal "BP1500Hz/dout<10>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000de" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig00000183" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk00000097" (SFF) removed.
+The signal "BP1500Hz/dout<9>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000dc" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig00000182" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk00000096" (SFF) removed.
+The signal "BP1500Hz/dout<8>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000dd" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig00000181" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk00000095" (SFF) removed.
+The signal "BP1500Hz/dout<7>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000db" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig00000180" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk00000094" (SFF) removed.
+The signal "BP1500Hz/dout<6>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000da" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig0000017f" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk00000093" (SFF) removed.
+The signal "BP1500Hz/dout<5>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000d9" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig0000017e" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk00000092" (SFF) removed.
+The signal "BP1500Hz/dout<4>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000d7" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig0000017d" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk00000091" (SFF) removed.
+The signal "BP1500Hz/dout<3>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000d8" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig0000017c" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk00000090" (SFF) removed.
+The signal "BP1500Hz/dout<2>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000d6" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig0000017b" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk0000008f" (SFF) removed.
+The signal "BP1500Hz/dout<1>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000d5" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig0000017a" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk0000008e" (SFF) removed.
+The signal "BP1500Hz/dout<0>" is sourceless and has been removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000d4" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig00000179" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk0000008d" (SFF) removed.
+The signal "BP1500Hz/blk00000003/sig00000013" is sourceless and has been
+removed.
+ Sourceless block "BP1500Hz/blk00000003/blk000000f9" (ROM) removed.
+  The signal "BP1500Hz/blk00000003/sig0000019e" is sourceless and has been
+removed.
+   Sourceless block "BP1500Hz/blk00000003/blk000000b2" (SFF) removed.
+The signal "BP1500Hz/blk00000003/sig00000058" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig00000059" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig0000005a" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig0000005b" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig0000005c" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig0000005d" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig0000005e" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig0000005f" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig00000060" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig00000061" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig00000062" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig00000063" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig00000064" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig00000065" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig00000066" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig00000067" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig00000068" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig00000069" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig0000006a" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig0000006b" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig0000006c" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig0000006d" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig0000006e" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig0000006f" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig00000070" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/sig000000b3" is sourceless and has been
+removed.
+ Sourceless block "BP1500Hz/blk00000003/blk0000001c" (FF) removed.
+The signal "BP1500Hz/blk00000003/blk0000000b/LO" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/blk0000002a/LO" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/blk0000002a/O" is sourceless and has been
+removed.
+ Sourceless block "BP1500Hz/blk00000003/blk0000002a/MUXCY_D_BUF" (BUF) removed.
+The signal "BP1500Hz/blk00000003/blk00000038/LO" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/blk00000043/LO" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/blk00000043/O" is sourceless and has been
+removed.
+ Sourceless block "BP1500Hz/blk00000003/blk00000043/MUXCY_D_BUF" (BUF) removed.
+The signal "BP1500Hz/blk00000003/blk00000051/LO" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/blk00000051/O" is sourceless and has been
+removed.
+ Sourceless block "BP1500Hz/blk00000003/blk00000051/MUXCY_D_BUF" (BUF) removed.
+The signal "BP1500Hz/blk00000003/blk0000005f/LO" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/blk0000005f/O" is sourceless and has been
+removed.
+ Sourceless block "BP1500Hz/blk00000003/blk0000005f/MUXCY_D_BUF" (BUF) removed.
+The signal "BP1500Hz/blk00000003/blk0000006c/LO" is sourceless and has been
+removed.
+The signal "BP1500Hz/blk00000003/blk0000006c/O" is sourceless and has been
+removed.
+ Sourceless block "BP1500Hz/blk00000003/blk0000006c/MUXCY_D_BUF" (BUF) removed.
+The signal "BS1500Hz/rdy" is sourceless and has been removed.
+The signal "BS1500Hz/dout<20>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000113" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000154" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000d4" (SFF) removed.
+The signal "BS1500Hz/dout<19>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000112" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000153" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000d3" (SFF) removed.
+The signal "BS1500Hz/dout<18>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000111" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000152" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000d2" (SFF) removed.
+The signal "BS1500Hz/dout<17>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000110" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000151" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000d1" (SFF) removed.
+The signal "BS1500Hz/dout<16>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk0000010f" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000150" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000d0" (SFF) removed.
+The signal "BS1500Hz/dout<15>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk0000010e" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig0000014f" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000cf" (SFF) removed.
+The signal "BS1500Hz/dout<14>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk0000010d" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig0000014e" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000ce" (SFF) removed.
+The signal "BS1500Hz/dout<13>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk0000010c" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig0000014d" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000cd" (SFF) removed.
+The signal "BS1500Hz/dout<12>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk0000010b" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig0000014c" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000cc" (SFF) removed.
+The signal "BS1500Hz/dout<11>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk0000010a" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig0000014b" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000cb" (SFF) removed.
+The signal "BS1500Hz/dout<10>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000109" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig0000014a" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000ca" (SFF) removed.
+The signal "BS1500Hz/dout<9>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000108" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000149" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000c9" (SFF) removed.
+The signal "BS1500Hz/dout<8>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000106" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000148" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000c8" (SFF) removed.
+The signal "BS1500Hz/dout<7>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000107" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000147" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000c7" (SFF) removed.
+The signal "BS1500Hz/dout<6>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000105" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000146" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000c6" (SFF) removed.
+The signal "BS1500Hz/dout<5>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000104" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000145" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000c5" (SFF) removed.
+The signal "BS1500Hz/dout<4>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000103" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000144" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000c4" (SFF) removed.
+The signal "BS1500Hz/dout<3>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000102" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000143" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000c3" (SFF) removed.
+The signal "BS1500Hz/dout<2>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000101" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000142" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000c2" (SFF) removed.
+The signal "BS1500Hz/dout<1>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000100" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000141" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000c1" (SFF) removed.
+The signal "BS1500Hz/dout<0>" is sourceless and has been removed.
+ Sourceless block "BS1500Hz/blk00000003/blk000000ff" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000140" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000c0" (SFF) removed.
+The signal "BS1500Hz/blk00000003/sig00000013" is sourceless and has been
+removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000120" (ROM) removed.
+  The signal "BS1500Hz/blk00000003/sig00000161" is sourceless and has been
+removed.
+   Sourceless block "BS1500Hz/blk00000003/blk000000e1" (SFF) removed.
+The signal "BS1500Hz/blk00000003/sig0000005a" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig0000005b" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig0000005c" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig0000005d" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig0000005e" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig0000005f" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig00000060" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig00000061" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig00000062" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig00000063" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig00000064" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig00000065" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig00000066" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig00000067" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig00000068" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig00000069" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig0000006a" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig0000006b" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig0000006c" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig0000006d" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig0000006e" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/sig0000009c" is sourceless and has been
+removed.
+ Sourceless block "BS1500Hz/blk00000003/blk0000001e" (FF) removed.
+The signal "BS1500Hz/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/blk0000002c/LO" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/blk0000002c/O" is sourceless and has been
+removed.
+ Sourceless block "BS1500Hz/blk00000003/blk0000002c/MUXCY_D_BUF" (BUF) removed.
+The signal "BS1500Hz/blk00000003/blk0000003a/LO" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/blk00000042/LO" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/blk00000042/O" is sourceless and has been
+removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000042/MUXCY_D_BUF" (BUF) removed.
+The signal "BS1500Hz/blk00000003/blk0000004b/LO" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/blk0000004b/O" is sourceless and has been
+removed.
+ Sourceless block "BS1500Hz/blk00000003/blk0000004b/MUXCY_D_BUF" (BUF) removed.
+The signal "BS1500Hz/blk00000003/blk00000053/LO" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/blk00000053/O" is sourceless and has been
+removed.
+ Sourceless block "BS1500Hz/blk00000003/blk00000053/MUXCY_D_BUF" (BUF) removed.
+The signal "BS1500Hz/blk00000003/blk0000005a/LO" is sourceless and has been
+removed.
+The signal "BS1500Hz/blk00000003/blk0000005a/O" is sourceless and has been
+removed.
+ Sourceless block "BS1500Hz/blk00000003/blk0000005a/MUXCY_D_BUF" (BUF) removed.
+The signal "BP250Hz_650Hz/rdy" is sourceless and has been removed.
+The signal "BP250Hz_650Hz/dout<22>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000173" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000183" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk0000012c" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<21>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000174" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000182" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk0000012b" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<20>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000172" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000181" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk0000012a" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<19>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000171" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000180" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000129" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<18>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000170" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig0000017f" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000128" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<17>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk0000016f" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig0000017e" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000127" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<16>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk0000016e" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig0000017d" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000126" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<15>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk0000016d" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig0000017c" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000125" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<14>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk0000016c" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig0000017b" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000124" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<13>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk0000016a" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig0000017a" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000123" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<12>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk0000016b" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000179" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000122" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<11>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000169" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000178" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000121" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<10>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000168" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000177" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000120" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<9>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000167" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000176" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk0000011f" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<8>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000166" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000175" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk0000011e" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<7>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000165" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000174" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk0000011d" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<6>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000164" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000173" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk0000011c" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<5>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000163" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000172" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk0000011b" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<4>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000161" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000171" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk0000011a" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<3>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000162" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000170" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000119" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<2>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000160" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig0000016f" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000118" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<1>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk0000015f" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig0000016e" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000117" (SFF) removed.
+The signal "BP250Hz_650Hz/dout<0>" is sourceless and has been removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk0000015e" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig0000016d" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000116" (SFF) removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000013" is sourceless and has been
+removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000181" (ROM) removed.
+  The signal "BP250Hz_650Hz/blk00000003/sig00000190" is sourceless and has been
+removed.
+   Sourceless block "BP250Hz_650Hz/blk00000003/blk00000139" (SFF) removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000056" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000057" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000058" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000059" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig0000005a" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig0000005b" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig0000005c" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig0000005d" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig0000005e" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig0000005f" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000060" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000061" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000062" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000063" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000064" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000065" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000066" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000067" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000068" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig00000069" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig0000006a" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig0000006b" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/sig0000006c" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/blk0000000b/LO" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/blk0000002e/LO" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/blk0000002e/O" is sourceless and has been
+removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk0000002e/MUXCY_D_BUF" (BUF)
+removed.
+The signal "BP250Hz_650Hz/blk00000003/blk0000003e/LO" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/blk00000048/LO" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/blk00000048/O" is sourceless and has been
+removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000048/MUXCY_D_BUF" (BUF)
+removed.
+The signal "BP250Hz_650Hz/blk00000003/blk00000055/LO" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/blk00000055/O" is sourceless and has been
+removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000055/MUXCY_D_BUF" (BUF)
+removed.
+The signal "BP250Hz_650Hz/blk00000003/blk00000061/LO" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/blk00000061/O" is sourceless and has been
+removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk00000061/MUXCY_D_BUF" (BUF)
+removed.
+The signal "BP250Hz_650Hz/blk00000003/blk0000006c/LO" is sourceless and has been
+removed.
+The signal "BP250Hz_650Hz/blk00000003/blk0000006c/O" is sourceless and has been
+removed.
+ Sourceless block "BP250Hz_650Hz/blk00000003/blk0000006c/MUXCY_D_BUF" (BUF)
+removed.
+Unused block "BP1500Hz/blk00000001" (ONE) removed.
+Unused block "BP1500Hz/blk00000002" (ZERO) removed.
+Unused block "BP1500Hz/blk00000003/blk0000000b/MUXCY_D_BUF" (BUF) removed.
+Unused block "BP1500Hz/blk00000003/blk0000002a" (MUX) removed.
+Unused block "BP1500Hz/blk00000003/blk00000038/MUXCY_D_BUF" (BUF) removed.
+Unused block "BP1500Hz/blk00000003/blk00000043" (MUX) removed.
+Unused block "BP1500Hz/blk00000003/blk00000051" (MUX) removed.
+Unused block "BP1500Hz/blk00000003/blk0000005f" (MUX) removed.
+Unused block "BP1500Hz/blk00000003/blk0000006c" (MUX) removed.
+Unused block "BP1500Hz/blk00000003/blk0000008c" (FF) removed.
+Unused block "BP250Hz_650Hz/blk00000001" (ONE) removed.
+Unused block "BP250Hz_650Hz/blk00000002" (ZERO) removed.
+Unused block "BP250Hz_650Hz/blk00000003/blk0000000b/MUXCY_D_BUF" (BUF) removed.
+Unused block "BP250Hz_650Hz/blk00000003/blk0000001e" (FF) removed.
+Unused block "BP250Hz_650Hz/blk00000003/blk0000002e" (MUX) removed.
+Unused block "BP250Hz_650Hz/blk00000003/blk0000003e/MUXCY_D_BUF" (BUF) removed.
+Unused block "BP250Hz_650Hz/blk00000003/blk00000048" (MUX) removed.
+Unused block "BP250Hz_650Hz/blk00000003/blk00000055" (MUX) removed.
+Unused block "BP250Hz_650Hz/blk00000003/blk00000061" (MUX) removed.
+Unused block "BP250Hz_650Hz/blk00000003/blk0000006c" (MUX) removed.
+Unused block "BS1500Hz/blk00000001" (ONE) removed.
+Unused block "BS1500Hz/blk00000002" (ZERO) removed.
+Unused block "BS1500Hz/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "BS1500Hz/blk00000003/blk00000011" (FF) removed.
+Unused block "BS1500Hz/blk00000003/blk0000002c" (MUX) removed.
+Unused block "BS1500Hz/blk00000003/blk0000003a/MUXCY_D_BUF" (BUF) removed.
+Unused block "BS1500Hz/blk00000003/blk00000042" (MUX) removed.
+Unused block "BS1500Hz/blk00000003/blk0000004b" (MUX) removed.
+Unused block "BS1500Hz/blk00000003/blk00000053" (MUX) removed.
+Unused block "BS1500Hz/blk00000003/blk0000005a" (MUX) removed.
+Unused block "HP4000Hz/blk00000001" (ONE) removed.
+Unused block "HP4000Hz/blk00000002" (ZERO) removed.
+Unused block "HP4000Hz/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "HP4000Hz/blk00000003/blk0000000e/MUXCY_D_BUF" (BUF) removed.
+Unused block "HP4000Hz/blk00000003/blk00000015" (FF) removed.
+Unused block "HP4000Hz/blk00000003/blk0000002f" (MUX) removed.
+Unused block "HP4000Hz/blk00000003/blk0000003e" (MUX) removed.
+Unused block "HP4000Hz/blk00000003/blk00000049" (MUX) removed.
+Unused block "HP4000Hz/blk00000003/blk00000053" (MUX) removed.
+Unused block "HP4000Hz/blk00000003/blk0000005c" (MUX) removed.
+Unused block "LP50Hz/blk00000001" (ONE) removed.
+Unused block "LP50Hz/blk00000002" (ZERO) removed.
+Unused block "LP50Hz/blk00000003/blk0000000b/MUXCY_D_BUF" (BUF) removed.
+Unused block "LP50Hz/blk00000003/blk0000001e" (FF) removed.
+Unused block "LP50Hz/blk00000003/blk0000002e" (MUX) removed.
+Unused block "LP50Hz/blk00000003/blk0000003e/MUXCY_D_BUF" (BUF) removed.
+Unused block "LP50Hz/blk00000003/blk00000048" (MUX) removed.
+Unused block "LP50Hz/blk00000003/blk00000055" (MUX) removed.
+Unused block "LP50Hz/blk00000003/blk00000061" (MUX) removed.
+Unused block "LP50Hz/blk00000003/blk0000006c" (MUX) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		BP1500Hz/blk00000003/blk00000004
+VCC 		BP1500Hz/blk00000003/blk00000005
+VCC 		BP1500Hz/blk00000003/blk00000074/blk00000075
+GND 		BP1500Hz/blk00000003/blk00000074/blk00000076
+GND 		BP1500Hz/blk00000003/blk00000078/blk00000079
+VCC 		BP1500Hz/blk00000003/blk00000078/blk0000007b
+GND 		BP250Hz_650Hz/blk00000003/blk00000004
+VCC 		BP250Hz_650Hz/blk00000003/blk00000005
+GND 		BS1500Hz/blk00000003/blk00000004
+VCC 		BS1500Hz/blk00000003/blk00000005
+GND 		HP4000Hz/blk00000003/blk00000004
+VCC 		HP4000Hz/blk00000003/blk00000005
+GND 		LP50Hz/blk00000003/blk00000004
+VCC 		LP50Hz/blk00000003/blk00000005
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ADC1_CLK                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| ADC1_CONV                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| ADC1_DATA                          | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| ADC2_CLK                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| ADC2_CONV                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| ADC2_DATA                          | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| DAC1_CS                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| DAC1_LDAC                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| DAC1_SCK                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| DAC1_SDI                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| DAC1_SHDN                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| DAC2_CS                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| DAC2_LDAC                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| DAC2_SCK                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| DAC2_SDI                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| DAC2_SHDN                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| LED_0                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| LED_1                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| LED_2                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| LED_3                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| LED_4                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| LED_5                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| LED_6                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| LED_7                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| LED_8                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| LED_9                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| LED_10                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| RX                                 | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          |          |
+| TX                                 | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLUP   |          |
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

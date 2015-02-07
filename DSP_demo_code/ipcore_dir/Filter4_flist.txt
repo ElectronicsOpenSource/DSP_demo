@@ -1,0 +1,16 @@
+# Output products list for <Filter4>
+Filter4.asy
+Filter4.gise
+Filter4.mif
+Filter4.ngc
+Filter4.sym
+Filter4.vhd
+Filter4.vho
+Filter4.xco
+Filter4.xise
+Filter4COEFF_auto0_0.mif
+Filter4_flist.txt
+Filter4_readme.txt
+Filter4_xmdf.tcl
+Filter4filt_decode_rom.mif
+_xmsgs\pn_parser.xmsgs

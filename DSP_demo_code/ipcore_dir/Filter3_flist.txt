@@ -1,0 +1,16 @@
+# Output products list for <Filter3>
+Filter3.asy
+Filter3.gise
+Filter3.mif
+Filter3.ngc
+Filter3.sym
+Filter3.vhd
+Filter3.vho
+Filter3.xco
+Filter3.xise
+Filter3COEFF_auto0_0.mif
+Filter3_flist.txt
+Filter3_readme.txt
+Filter3_xmdf.tcl
+Filter3filt_decode_rom.mif
+_xmsgs\pn_parser.xmsgs

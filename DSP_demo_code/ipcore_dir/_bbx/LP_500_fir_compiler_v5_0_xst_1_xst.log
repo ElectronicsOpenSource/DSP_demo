@@ -1,0 +1,1487 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter xsthdpdir set to ./tmp/_cg/LP_500_fir_compiler_v5_0_xst_1_xsd
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> 
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: ./tmp/_cg/_bbx/LP_500_fir_compiler_v5_0_xst_1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "./tmp/_cg/_bbx/LP_500_fir_compiler_v5_0_xst_1.prj"
+Input Format                       : vhdl
+
+---- Target Parameters
+Output Format                      : NGC
+Output File Name                   : "./tmp/_cg/LP_500_fir_compiler_v5_0_xst_1.ngc"
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Work Library                       : fir_compiler_v5_0
+Entity Name                        : LP_500_fir_compiler_v5_0_xst_1
+Architecture Name                  : spartan6
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Bus Delimiter                      : <>
+
+=========================================================================
+
+WARNING:Xst:29 - Optimization Effort not specified
+The following parameters have been added:
+Optimization Goal                  : SPEED
+
+=========================================================================
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\xbip_utils_v2_0\bip_utils_pkg_v2_0.vhd" into library xbip_utils_v2_0
+Parsing package <bip_utils_pkg_v2_0>.
+Parsing package body <bip_utils_pkg_v2_0>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\xbip_utils_v2_0\bip_usecase_utils_pkg_v2_0.vhd" into library xbip_utils_v2_0
+Parsing package <bip_usecase_utils_pkg_v2_0>.
+Parsing package body <bip_usecase_utils_pkg_v2_0>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\xbip_utils_v2_0\xcc_utils_v2_0.vhd" into library xbip_utils_v2_0
+Parsing package <xcc_utils_v2_0>.
+Parsing package body <xcc_utils_v2_0>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\da_fir_v9_0\da_utils.vhd" into library da_fir_v9_0
+Parsing package <da_utils>.
+Parsing package body <da_utils>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\da_fir_v9_0\c_da_fir_v9_0_xst_comp.vhd" into library da_fir_v9_0
+Parsing package <c_da_fir_v9_0_xst_comp>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\toolbox_pkg.vhd" into library fir_compiler_v5_0
+Parsing package <toolbox_pkg>.
+Parsing package body <toolbox_pkg>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\addsub.vhd" into library fir_compiler_v5_0
+Parsing entity <add_sub>.
+Parsing architecture <structural> of entity <add_sub>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\latch_gen.vhd" into library fir_compiler_v5_0
+Parsing entity <latch_gen>.
+Parsing architecture <struct_all> of entity <latch_gen>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\blank_reg.vhd" into library fir_compiler_v5_0
+Parsing entity <blank_reg>.
+Parsing architecture <struct_all> of entity <blank_reg>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" into library fir_compiler_v5_0
+Parsing entity <output_latch>.
+Parsing architecture <struct_all> of entity <output_latch>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\casc_counters.vhd" into library fir_compiler_v5_0
+Parsing entity <casc_counters>.
+Parsing architecture <struct_all> of entity <casc_counters>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\chan_cnt.vhd" into library fir_compiler_v5_0
+Parsing entity <chan_cnt>.
+Parsing architecture <struct_all> of entity <chan_cnt>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\coef_address.vhd" into library fir_compiler_v5_0
+Parsing entity <coef_address>.
+Parsing architecture <struct_all> of entity <coef_address>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\coef_reload_cntrl.vhd" into library fir_compiler_v5_0
+Parsing entity <coef_reload_cntrl>.
+Parsing architecture <struct_all> of entity <coef_reload_cntrl>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\compare.vhd" into library fir_compiler_v5_0
+Parsing entity <compare>.
+Parsing architecture <arch1> of entity <compare>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\compare_dualval.vhd" into library fir_compiler_v5_0
+Parsing entity <compare_dualval>.
+Parsing architecture <arch1> of entity <compare_dualval>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\counter.vhd" into library fir_compiler_v5_0
+Parsing entity <counter>.
+Parsing architecture <rtl> of entity <counter>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" into library fir_compiler_v5_0
+Parsing entity <data_address>.
+Parsing architecture <struct_all> of entity <data_address>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\delay.vhd" into library fir_compiler_v5_0
+Parsing entity <delay>.
+Parsing architecture <struct_all> of entity <delay>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\delay_bit.vhd" into library fir_compiler_v5_0
+Parsing entity <delay_bit>.
+Parsing architecture <struct_all> of entity <delay_bit>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\dpr_ram.vhd" into library fir_compiler_v5_0
+Parsing entity <dpr_ram>.
+Parsing architecture <implementation> of entity <dpr_ram>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\dpt_ram.vhd" into library fir_compiler_v5_0
+Parsing entity <dpt_ram>.
+Parsing architecture <implementation> of entity <dpt_ram>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\emb_calc.vhd" into library fir_compiler_v5_0
+Parsing entity <emb_calc>.
+Parsing architecture <struct_all> of entity <emb_calc>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" into library fir_compiler_v5_0
+Parsing entity <filt_arm_add_casc>.
+Parsing architecture <struct_all> of entity <filt_arm_add_casc>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_transpose.vhd" into library fir_compiler_v5_0
+Parsing entity <filt_arm_transpose>.
+Parsing architecture <struct_all> of entity <filt_arm_transpose>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\mod_counter.vhd" into library fir_compiler_v5_0
+Parsing entity <mod_counter>.
+Parsing architecture <struct_all> of entity <mod_counter>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\rfd_gen.vhd" into library fir_compiler_v5_0
+Parsing entity <rfd_gen>.
+Parsing architecture <struct_all> of entity <rfd_gen>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\sp_ram.vhd" into library fir_compiler_v5_0
+Parsing entity <sp_ram>.
+Parsing architecture <implementation> of entity <sp_ram>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\tap_memory_add_casc.vhd" into library fir_compiler_v5_0
+Parsing entity <tap_memory_add_casc>.
+Parsing architecture <struct_all> of entity <tap_memory_add_casc>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\twopage_address.vhd" into library fir_compiler_v5_0
+Parsing entity <twopage_address>.
+Parsing architecture <struct_all> of entity <twopage_address>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mif_file\mif_file_pkg.vhd" into library fir_compiler_v5_0
+Parsing package <mif_file_pkg>.
+Parsing package body <mif_file_pkg>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_elements_pkg.vhd" into library fir_compiler_v5_0
+Parsing package <mac_elements_pkg>.
+Parsing package body <mac_elements_pkg>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\da_elements\da_elements_pkg.vhd" into library fir_compiler_v5_0
+Parsing package <da_elements_pkg>.
+Parsing package body <da_elements_pkg>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_select.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_select>.
+Parsing architecture <struct_all> of entity <mac_fir_select>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_halfband.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_halfband>.
+Parsing architecture <struct_all> of entity <mac_fir_halfband>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_halfband_decimation.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_halfband_decimation>.
+Parsing architecture <struct_all> of entity <mac_fir_halfband_decimation>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_halfband_interpolation.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_halfband_interpolation>.
+Parsing architecture <struct_all> of entity <mac_fir_halfband_interpolation>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_hilbert.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_hilbert>.
+Parsing architecture <struct_all> of entity <mac_fir_hilbert>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_interpolated.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_interpolated>.
+Parsing architecture <struct_all> of entity <mac_fir_interpolated>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_polyphase_decimation.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_polyphase_decimation>.
+Parsing architecture <struct_all> of entity <mac_fir_polyphase_decimation>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_polyphase_interpolation.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_polyphase_interpolation>.
+Parsing architecture <struct_all> of entity <mac_fir_polyphase_interpolation>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_polyphase_pq_decimation.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_polyphase_pq_decimation>.
+Parsing architecture <struct_all> of entity <mac_fir_polyphase_pq_decimation>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_polyphase_pq_decimation_alt.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_polyphase_pq_decimation_alt>.
+Parsing architecture <struct_all> of entity <mac_fir_polyphase_pq_decimation_alt>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_polyphase_pq_interpolation.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_polyphase_pq_interpolation>.
+Parsing architecture <struct_all> of entity <mac_fir_polyphase_pq_interpolation>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_polyphase_sympair_interpolation.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_polyphase_sympair_interpolation>.
+Parsing architecture <struct_all> of entity <mac_fir_polyphase_sympair_interpolation>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_single_rate>.
+Parsing architecture <struct_all> of entity <mac_fir_single_rate>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\polyphase_decimation_sym_wrap.vhd" into library fir_compiler_v5_0
+Parsing entity <polyphase_decimation_sym_wrap>.
+Parsing architecture <struct_all> of entity <polyphase_decimation_sym_wrap>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_channelizer.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_channelizer>.
+Parsing architecture <struct_all> of entity <mac_fir_channelizer>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_extended_mult.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_extended_mult>.
+Parsing architecture <struct_all> of entity <mac_fir_extended_mult>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_transpose.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir_transpose>.
+Parsing architecture <struct_all> of entity <mac_fir_transpose>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir.vhd" into library fir_compiler_v5_0
+Parsing entity <mac_fir>.
+Parsing architecture <struct_all> of entity <mac_fir>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\fir_compiler_v5_0_xst.vhd" into library fir_compiler_v5_0
+Parsing entity <fir_compiler_v5_0_xst>.
+Parsing architecture <synth> of entity <fir_compiler_v5_0_xst>.
+Parsing VHDL file "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\LP_500_fir_compiler_v5_0_xst_1.vhd" into library fir_compiler_v5_0
+Parsing entity <LP_500_fir_compiler_v5_0_xst_1>.
+Parsing architecture <spartan6> of entity <lp_500_fir_compiler_v5_0_xst_1>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <LP_500_fir_compiler_v5_0_xst_1> (architecture <spartan6>) from library <fir_compiler_v5_0>.
+
+Elaborating entity <fir_compiler_v5_0_xst> (architecture <synth>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <mac_fir> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <mac_fir_select> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <mac_fir_single_rate> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+Note: "NOTE : FIR Compiler v5.0 : FIR: gen_mif_files"
+Note: "NOTE : FIR Compiler v5.0 : TAPS     : 141"
+Note: "NOTE : FIR Compiler v5.0 : FILTS    : 1"
+Note: "NOTE : FIR Compiler v5.0 : Generating MIF files for path - 0"
+Note: "NOTE : FIR Compiler v5.0 : Extracting Filter - 0"
+WARNING:HDLCompiler:746 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\toolbox_pkg.vhd" Line 3455: Range is empty (null range)
+WARNING:HDLCompiler:746 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\toolbox_pkg.vhd" Line 1670: Range is empty (null range)
+
+Elaborating entity <rfd_gen> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <counter> (architecture <rtl>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <compare> (architecture <arch1>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <latch_gen> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+WARNING:HDLCompiler:746 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\latch_gen.vhd" Line 348: Range is empty (null range)
+WARNING:HDLCompiler:746 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\latch_gen.vhd" Line 261: Range is empty (null range)
+WARNING:HDLCompiler:746 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\latch_gen.vhd" Line 456: Range is empty (null range)
+WARNING:HDLCompiler:634 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\latch_gen.vhd" Line 536: Net <not_latch_gen> does not have a driver.
+
+Elaborating entity <casc_counters> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+WARNING:HDLCompiler:871 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\casc_counters.vhd" Line 117: Using initial value "0000000" for zeros since it is never assigned
+
+Elaborating entity <counter> (architecture <rtl>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <compare> (architecture <arch1>) with generics from library <fir_compiler_v5_0>.
+WARNING:HDLCompiler:1127 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" Line 1285: Assignment to chan0_in_clr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" Line 1397: Assignment to addr_en_gen_default_src ignored, since the identifier is never used
+
+Elaborating entity <latch_gen> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <latch_gen> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <blank_reg> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <latch_gen> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+WARNING:HDLCompiler:634 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\blank_reg.vhd" Line 161: Net <outs[5]> does not have a driver.
+
+Elaborating entity <data_address> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <delay_bit> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <delay_bit> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+WARNING:HDLCompiler:746 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\delay_bit.vhd" Line 98: Range is empty (null range)
+
+Elaborating entity <counter> (architecture <rtl>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <counter> (architecture <rtl>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <coef_address> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <delay_bit> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <delay> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <counter> (architecture <rtl>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <delay> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <delay> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <filt_arm_add_casc> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <tap_memory_add_casc> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+WARNING:HDLCompiler:871 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\tap_memory_add_casc.vhd" Line 145: Using initial value "0000000000000000" for zeros since it is never assigned
+
+Elaborating entity <dpt_ram> (architecture <implementation>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <sp_ram> (architecture <implementation>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <emb_calc> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <delay> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <delay> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+WARNING:HDLCompiler:634 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" Line 213: Net <coef_reload_data[0][1][15]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" Line 220: Net <coef_reload_addr[0][1][6]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" Line 242: Net <c_we[0][1]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" Line 393: Net <gen_independant_col[0].gen_split_col[0].gen_taps[1].PCIN_sel[47]> does not have a driver.
+
+Elaborating entity <delay> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <delay> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+WARNING:HDLCompiler:92 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" Line 1941: ce_int should be on the sensitivity list of the process
+
+Elaborating entity <delay_bit> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <output_latch> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+
+Elaborating entity <latch_gen> (architecture <struct_all>) with generics from library <fir_compiler_v5_0>.
+WARNING:HDLCompiler:634 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" Line 1129: Net <reload_addr[6]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" Line 1143: Net <reload_din[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" Line 1206: Net <chan_out_int[0]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" Line 1208: Net <chan_in_int[0]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" Line 1221: Net <reload_we[1]> does not have a driver.
+WARNING:Xst:2972 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 142. All outputs of instance <gen_struct.gen_block_end_dly> of block <delay_bit> are unconnected in block <data_address>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 172. All outputs of instance <gen_struct.gen_sym_block_end_dly> of block <delay_bit> are unconnected in block <data_address>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 187. All outputs of instance <gen_struct.gen_sym_last_block_dly> of block <delay_bit> are unconnected in block <data_address>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 202. All outputs of instance <gen_struct.gen_write_phase_dly> of block <delay_bit> are unconnected in block <data_address>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 217. All outputs of instance <gen_struct.gen_sub_block_end_dly> of block <delay_bit> are unconnected in block <data_address>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\coef_address.vhd" line 282. All outputs of instance <gen_struct.gen_filt_sel_dly> of block <delay> are unconnected in block <coef_address>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" line 878. All outputs of instance <gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_data_casc.data_casc_dly> of block <delay> are unconnected in block <filt_arm_add_casc>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" line 949. All outputs of instance <gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_data_sym_casc.gen_norm.we_sym_casc_gen> of block <delay_bit> are unconnected in block <filt_arm_add_casc>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" line 973. All outputs of instance <gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_data_sym_casc.gen_norm.data_sym_casc_dly> of block <delay> are unconnected in block <filt_arm_add_casc>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <LP_500_fir_compiler_v5_0_xst_1>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\LP_500_fir_compiler_v5_0_xst_1.vhd".
+    Summary:
+	no macro.
+Unit <LP_500_fir_compiler_v5_0_xst_1> synthesized.
+
+Synthesizing Unit <fir_compiler_v5_0_xst>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\fir_compiler_v5_0_xst.vhd".
+        C_FAMILY = "spartan6"
+        C_XDEVICEFAMILY = "spartan6"
+        C_ELABORATION_DIR = "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\.\tmp\_cg\"
+        C_COMPONENT_NAME = "LP_500"
+        C_MEM_INIT_FILE = "LP_500.mif"
+        FILTER_TYPE = 0
+        INTERP_RATE = 1
+        DECIM_RATE = 1
+        RATE_CHANGE_TYPE = 0
+        ZERO_PACKING_FACTOR = 1
+        NUM_CHANNELS = 1
+        CHAN_IN_ADV = 0
+        CHAN_SEL_WIDTH = 1
+        NUM_TAPS = 141
+        CLOCK_FREQ = 32000000
+        SAMPLE_FREQ = 250000
+        FILTER_ARCH = 1
+        DATA_TYPE = 0
+        DATA_WIDTH = 16
+        COEF_TYPE = 0
+        COEF_WIDTH = 16
+        ROUND_MODE = 0
+        ACCUM_WIDTH = 33
+        OUTPUT_WIDTH = 33
+        ALLOW_APPROX = 0
+        OUTPUT_REG = 1
+        SYMMETRY = 1
+        ODD_SYMMETRY = 1
+        NEG_SYMMETRY = 0
+        COEF_RELOAD = 0
+        NUM_FILTS = 1
+        FILTER_SEL_WIDTH = 1
+        C_HAS_SCLR = 0
+        C_HAS_CE = 0
+        C_HAS_ND = 0
+        C_HAS_DATA_VALID = 0
+        DATA_MEMTYPE = 0
+        COEF_MEMTYPE = 0
+        IPBUFF_MEMTYPE = 0
+        OPBUFF_MEMTYPE = 0
+        DATAPATH_MEMTYPE = 0
+        COL_MODE = 0
+        COL_PIPE_LEN = 4
+        COL_CONFIG = "1"
+        C_LATENCY = 80
+        C_OPTIMIZATION = 1
+        NUM_PATHS = 1
+        SCLR_DETERMINISTIC = 0
+    Summary:
+	no macro.
+Unit <fir_compiler_v5_0_xst> synthesized.
+
+Synthesizing Unit <mac_fir>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir.vhd".
+        C_FAMILY = "spartan6"
+        C_XDEVICEFAMILY = "spartan6"
+        C_ELABORATION_DIR = "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\.\tmp\_cg\"
+        C_COMPONENT_NAME = "LP_500"
+        C_MEM_INIT_FILE = "LP_500.mif"
+        FILTER_TYPE = 0
+        INTERP_RATE = 1
+        DECIM_RATE = 1
+        RATE_CHANGE_TYPE = 0
+        ZERO_PACKING_FACTOR = 1
+        NUM_CHANNELS = 1
+        CHAN_IN_ADV = 0
+        CHAN_SEL_WIDTH = 1
+        NUM_TAPS = 141
+        CLOCK_FREQ = 32000000
+        SAMPLE_FREQ = 250000
+        FILTER_ARCH = 1
+        DATA_TYPE = 0
+        DATA_WIDTH = 16
+        COEF_TYPE = 0
+        COEF_WIDTH = 16
+        ROUND_MODE = 0
+        ACCUM_WIDTH = 33
+        OUTPUT_WIDTH = 33
+        ALLOW_APPROX = 0
+        OUTPUT_REG = 1
+        SYMMETRY = 1
+        ODD_SYMMETRY = 1
+        NEG_SYMMETRY = 0
+        COEF_RELOAD = 0
+        NUM_FILTS = 1
+        FILTER_SEL_WIDTH = 1
+        C_HAS_SCLR = 0
+        C_HAS_CE = 0
+        C_HAS_ND = 0
+        C_HAS_CHAN0_IN = 0
+        C_HAS_DATA_VALID = 0
+        DATA_MEMTYPE = 0
+        COEF_MEMTYPE = 0
+        IPBUFF_MEMTYPE = 0
+        OPBUFF_MEMTYPE = 0
+        DATAPATH_MEMTYPE = 0
+        COL_MODE = 0
+        COL_PIPE_LEN = 4
+        COL_CONFIG = "1"
+        C_LATENCY = 80
+        C_RESOURCE_OPT = 1
+        XIL_FFT_COMPATIBLE = 1
+        NUM_PATHS = 1
+        SCLR_DETERMINISTIC = 0
+WARNING:Xst:647 - Input <DIN_1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_5> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_6> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_7> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_8> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_9> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_10> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_11> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_12> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_13> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_14> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_15> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DIN_16> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir.vhd" line 701: Output port <ACCUM_OUT> of the instance <fir_select> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir.vhd" line 701: Output port <PAT_MATCH> of the instance <fir_select> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <mac_fir> synthesized.
+
+Synthesizing Unit <mac_fir_select>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_select.vhd".
+        config = (((p_dsp48a1,true,false,false,true,32,8,2),0,1,1,0,141,128,1,0,1,1,0,1,0,16,16,1,1,0,33,33,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,4,(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1),1,1,1,((0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)),false,0,false,"000000000000000000000000000000000000000000000000","111111111111111111111111111111111111111111111111",0),single_rate)
+        elab_dir = "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\.\tmp\_cg\"
+        comp_name = "LP_500"
+        mif_file = "LP_500.mif"
+WARNING:Xst:653 - Signal <DOUT_Q> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <DOUT_I> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <mac_fir_select> synthesized.
+
+Synthesizing Unit <mac_fir_single_rate>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd".
+        reqs = ((p_dsp48a1,true,false,false,true,32,8,2),0,1,1,0,141,128,1,0,1,1,0,1,0,16,16,1,1,0,33,33,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,4,(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1),1,1,1,((0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)),false,0,false,"000000000000000000000000000000000000000000000000","111111111111111111111111111111111111111111111111",0)
+        elab_dir = "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\.\tmp\_cg\"
+        comp_name = "LP_500"
+        mif_file = "LP_500.mif"
+    Set property "use_sync_set = no" for signal <accum_opcode>.
+    Set property "use_sync_reset = no" for signal <accum_opcode>.
+WARNING:Xst:647 - Input <COEF_DIN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <COEF_FILTER_SEL> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <OUT_SRC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <CE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ND> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <COEF_WE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1247: Output port <CNT> of the instance <gen_rfd> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1262: Output port <CNT1> of the instance <cntrl_counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1262: Output port <CNT2> of the instance <cntrl_counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1262: Output port <CNT3> of the instance <cntrl_counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1262: Output port <CNT2_MAX> of the instance <cntrl_counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1262: Output port <CNT3_MAX> of the instance <cntrl_counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1262: Output port <ALL_MAX_COUT> of the instance <cntrl_counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1349: Output port <not_latch> of the instance <gen_base_en> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1409: Output port <not_latch> of the instance <gen_addr_en_latch.gen_addr_en> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1445: Output port <not_latch> of the instance <gen_stop_earily> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1488: Output port <out3> of the instance <gen_blank_reg> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1488: Output port <out4> of the instance <gen_blank_reg> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1488: Output port <out5> of the instance <gen_blank_reg> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1488: Output port <out6> of the instance <gen_blank_reg> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1686: Output port <PC_OUT> of the instance <gen_filter_block> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1686: Output port <D_SYM_OUT> of the instance <gen_filter_block> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1686: Output port <C_OUT> of the instance <gen_filter_block> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1686: Output port <PAT_DET> of the instance <gen_filter_block> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1686: Output port <PAT_DET_B> of the instance <gen_filter_block> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1686: Output port <WE_OUT> of the instance <gen_filter_block> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1686: Output port <WE_SYM_OUT_2> of the instance <gen_filter_block> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1686: Output port <ADDSUB_OUT> of the instance <gen_filter_block> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\mac_elements\mac_fir_single_rate.vhd" line 1686: Output port <ADDSUP_OUT> of the instance <gen_filter_block> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <ACCUM_OUT> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <PAT_MATCH> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <reload_addr> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <reload_din> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:2935 - Signal 'chan_out_int', unconnected in block 'mac_fir_single_rate', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'chan_in_int', unconnected in block 'mac_fir_single_rate', is tied to its initial value (0).
+WARNING:Xst:653 - Signal <reload_we> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <filter_sel_in>.
+    Found 1-bit register for signal <we_gen>.
+    Found 1-bit register for signal <base_max_latch>.
+    Found 1-bit register for signal <chan_max_latch>.
+    Found 4-bit register for signal <accum_opcode>.
+    Found 1-bit register for signal <rdy_reg>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <mac_fir_single_rate> synthesized.
+
+Synthesizing Unit <rfd_gen>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\rfd_gen.vhd".
+        param = ((p_dsp48a1,true,false,false,true,32,8,2),1,128,128,0)
+WARNING:Xst:647 - Input <CHAN_MAX> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\rfd_gen.vhd" line 110: Output port <X_NOREG> of the instance <gen_struct.gen_norm.gen_counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\rfd_gen.vhd" line 110: Output port <C_OUT> of the instance <gen_struct.gen_norm.gen_counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\rfd_gen.vhd" line 184: Output port <not_latch> of the instance <gen_struct.gen_norm.cntrl> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <rfd_gen> synthesized.
+
+Synthesizing Unit <counter_1>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\counter.vhd".
+        width = 7
+        init_sclr = 0
+        const_vals = (-127,-127,1,0)
+        conditions = ((p_c0_and_c1_and_c2,add_constant,-2147483648),(p_c0_and_c1,add_constant,-2147483648),(p_c0,add_constant,-2147483648))
+        c_in_multi_src = 0
+        use_external_src = 0
+        use_push_to_carry = 0
+        push_to_carry_condition = (p_c0,add_constant,-2147483648)
+WARNING:Xst:647 - Input <X_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <counter_1> synthesized.
+
+Synthesizing Unit <compare_1>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\compare.vhd".
+        const = 1
+        value = 126
+        init_val = 1
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        has_res_en = 0
+WARNING:Xst:647 - Input <B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <res_en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <compare_1> synthesized.
+
+Synthesizing Unit <latch_gen_1>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\latch_gen.vhd".
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        set_string = "1&0"
+        clr_string = "2"
+        set_over_clr = 1
+        no_default = 0
+        init_sclr = 0
+        select_ip = 0
+        sel_string = ""
+WARNING:Xst:653 - Signal <not_latch_gen> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <latch_gen_1> synthesized.
+
+Synthesizing Unit <casc_counters>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\casc_counters.vhd".
+        param = (71,1,1,1,(p_dsp48a1,true,false,false,true,32,8,2),1)
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\casc_counters.vhd" line 127: Output port <X_NOREG> of the instance <gen_struct.gen_cnt1.cnt_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\casc_counters.vhd" line 127: Output port <C_OUT> of the instance <gen_struct.gen_cnt1.cnt_1> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <casc_counters> synthesized.
+
+Synthesizing Unit <counter_2>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\counter.vhd".
+        width = 7
+        init_sclr = 0
+        const_vals = (-70,1,0)
+        conditions = ((p_c0_and_c1,add_constant,-2147483648),(p_c0,add_constant,-2147483648))
+        c_in_multi_src = 0
+        use_external_src = 0
+        use_push_to_carry = 0
+        push_to_carry_condition = (p_c0,add_constant,-2147483648)
+WARNING:Xst:647 - Input <X_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <C2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <counter_2> synthesized.
+
+Synthesizing Unit <compare_2>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\compare.vhd".
+        const = 1
+        value = 69
+        init_val = 0
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        has_res_en = 0
+WARNING:Xst:647 - Input <B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <res_en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <compare_2> synthesized.
+
+Synthesizing Unit <latch_gen_2>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\latch_gen.vhd".
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        set_string = "3&1&0"
+        clr_string = "4&2"
+        set_over_clr = 1
+        no_default = 0
+        init_sclr = 0
+        select_ip = 0
+        sel_string = ""
+WARNING:Xst:653 - Signal <not_latch_gen> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <latch_gen_2> synthesized.
+
+Synthesizing Unit <latch_gen_3>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\latch_gen.vhd".
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        set_string = "4&2"
+        clr_string = "3&1&0"
+        set_over_clr = 0
+        no_default = 0
+        init_sclr = 0
+        select_ip = 0
+        sel_string = ""
+WARNING:Xst:653 - Signal <not_latch_gen> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <latch_gen_3> synthesized.
+
+Synthesizing Unit <blank_reg>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\blank_reg.vhd".
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        set_string = "s&!4&2"
+        num_srcs = 2
+        init_sclr = 0
+WARNING:Xst:647 - Input <src3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <src4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <src5> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <src6> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\blank_reg.vhd" line 183: Output port <not_latch> of the instance <gen_blank_regs[0].blank_reg_x> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\blank_reg.vhd" line 183: Output port <not_latch> of the instance <gen_blank_regs[1].blank_reg_x> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <outs<5:2>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <blank_reg> synthesized.
+
+Synthesizing Unit <latch_gen_4>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\latch_gen.vhd".
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        set_string = "5&!4&2"
+        clr_string = "0"
+        set_over_clr = 1
+        no_default = 1
+        init_sclr = 0
+        select_ip = 0
+        sel_string = ""
+WARNING:Xst:647 - Input <ips<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ips<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <default> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <not_latch_gen> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <latch_gen_4> synthesized.
+
+Synthesizing Unit <data_address>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd".
+        param = ((p_dsp48a1,true,false,false,true,32,8,2),1,1,71,1,1,7,8,1,2,0,0,1,0,false,0,1,0,0,0,0)
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 142: Output port <D_OUT> of the instance <gen_struct.gen_block_end_dly> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 172: Output port <D_OUT> of the instance <gen_struct.gen_sym_block_end_dly> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 187: Output port <D_OUT> of the instance <gen_struct.gen_sym_last_block_dly> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 202: Output port <D_OUT> of the instance <gen_struct.gen_write_phase_dly> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 217: Output port <D_OUT> of the instance <gen_struct.gen_sub_block_end_dly> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 925: Output port <X_NOREG> of the instance <gen_struct.gen_bram_addr_rolling.gen_sing_block.gen_norm_seq.addrcnt> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 925: Output port <C_OUT> of the instance <gen_struct.gen_bram_addr_rolling.gen_sing_block.gen_norm_seq.addrcnt> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 951: Output port <X_NOREG> of the instance <gen_struct.gen_bram_addr_rolling.gen_sing_block.gen_symaddr.symaddrcnt> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\data_address.vhd" line 951: Output port <C_OUT> of the instance <gen_struct.gen_bram_addr_rolling.gen_sing_block.gen_symaddr.symaddrcnt> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <data_address> synthesized.
+
+Synthesizing Unit <delay_bit_1>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\delay_bit.vhd".
+        delay_len = 1
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        implementation = 1
+        mem_type = 1
+    Set property "shreg_extract = yes" for signal <gen_rtl.delay_bus>.
+    Found 1-bit register for signal <gen_rtl.gen_reg.d_reg>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <delay_bit_1> synthesized.
+
+Synthesizing Unit <delay_bit_2>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\delay_bit.vhd".
+        delay_len = 0
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        implementation = 1
+        mem_type = 1
+WARNING:Xst:647 - Input <WE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <CE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <SCLR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <delay_bit_2> synthesized.
+
+Synthesizing Unit <counter_3>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\counter.vhd".
+        width = 7
+        init_sclr = 0
+        const_vals = (-71,1,0)
+        conditions = ((p_c0_and_c1,add_constant,-2147483648),(p_c0,add_constant,-2147483648))
+        c_in_multi_src = 0
+        use_external_src = 0
+        use_push_to_carry = 0
+        push_to_carry_condition = (p_c0,add_constant,-2147483648)
+WARNING:Xst:647 - Input <X_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <C2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <counter_3> synthesized.
+
+Synthesizing Unit <counter_4>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\counter.vhd".
+        width = 7
+        init_sclr = 0
+        const_vals = (-69,1,0)
+        conditions = ((p_c0_and_c1,add_constant,-2147483648),(p_c0,add_constant,-2147483648))
+        c_in_multi_src = 0
+        use_external_src = 0
+        use_push_to_carry = 0
+        push_to_carry_condition = (p_c0,add_constant,-2147483648)
+WARNING:Xst:647 - Input <X_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <C2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <counter_4> synthesized.
+
+Synthesizing Unit <coef_address>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\coef_address.vhd".
+        param = ((p_dsp48a1,true,false,false,true,32,8,2),1,71,1,0,7,1,0,0,0,0,2,1,1,1,3,1)
+        elab_dir = "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\.\tmp\_cg\"
+        comp_name = "LP_500"
+    Set property "KEEP = TRUE" for signal <ADDR>.
+WARNING:Xst:647 - Input <COUNT_SRC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\coef_address.vhd" line 282: Output port <D_OUT> of the instance <gen_struct.gen_filt_sel_dly> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\coef_address.vhd" line 337: Output port <X_NOREG> of the instance <gen_struct.gen_counter.addrcnt> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\coef_address.vhd" line 337: Output port <C_OUT> of the instance <gen_struct.gen_counter.addrcnt> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <coef_address> synthesized.
+
+Synthesizing Unit <delay_bit_3>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\delay_bit.vhd".
+        delay_len = 2
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        implementation = 1
+        mem_type = 1
+    Set property "shreg_extract = yes" for signal <gen_rtl.delay_bus>.
+WARNING:Xst:647 - Input <SCLR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <gen_rtl.delay_bus>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <delay_bit_3> synthesized.
+
+Synthesizing Unit <counter_5>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\counter.vhd".
+        width = 7
+        init_sclr = 0
+        const_vals = (-71,0,-71,0)
+        conditions = ((p_c0_and_c1_and_c2,add_constant,-2147483648),(p_c0_and_c1,add_constant,-2147483648),(p_c0,add_constant,-2147483648))
+        c_in_multi_src = 0
+        use_external_src = 0
+        use_push_to_carry = 0
+        push_to_carry_condition = (p_c0,add_constant,-2147483648)
+WARNING:Xst:647 - Input <X_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <counter_5> synthesized.
+
+Synthesizing Unit <delay_2>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\delay.vhd".
+        delay_len = 3
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        implementation = 1
+        default_data = 0
+        mem_type = 1
+    Set property "shreg_extract = yes" for signal <gen_dly.delay_bus<2>>.
+    Set property "shreg_extract = yes" for signal <gen_dly.delay_bus<1>>.
+    Set property "shreg_extract = yes" for signal <gen_dly.delay_bus<0>>.
+WARNING:Xst:647 - Input <SCLR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <gen_dly.delay_bus<1>>.
+    Found 16-bit register for signal <gen_dly.delay_bus<0>>.
+    Found 16-bit register for signal <gen_dly.delay_bus<2>>.
+    Summary:
+	inferred  48 D-type flip-flop(s).
+Unit <delay_2> synthesized.
+
+Synthesizing Unit <delay_3>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\delay.vhd".
+        delay_len = 2
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        implementation = 1
+        default_data = 0
+        mem_type = 1
+    Set property "shreg_extract = yes" for signal <gen_dly.delay_bus<1>>.
+    Set property "shreg_extract = yes" for signal <gen_dly.delay_bus<0>>.
+WARNING:Xst:647 - Input <SCLR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <gen_dly.delay_bus<0>>.
+    Found 1-bit register for signal <gen_dly.delay_bus<1>>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <delay_3> synthesized.
+
+Synthesizing Unit <filt_arm_add_casc>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd".
+        param =
+((p_dsp48a1,true,false,false,true,32,8,2),1,1,71,2,2,1,1,0,1,1,1,0,0,0,0,0,128,128,0,0,0,2,71,(2,2,1,1,1,1,2,1,2,2),(0,0,1,0,0,0,0,0,0,0),1,4,(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1),1,0,0,1,0,0,"000000000000000000000000000000000000000000000000","111111111111111111111111111111111111111111111110",(false,false,false,true,false,true,true,false,false,false,false,false,false,false,false,false),false,false,1,((0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)),(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),false,false)
+        elab_dir = "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\.\tmp\_cg\"
+        comp_name = "LP_500"
+WARNING:Xst:647 - Input <COEF_WE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <COEF_DIN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <COEF_RELOAD_ADDR_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DUAL_MEM_WE_MASK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <COEF_LD> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" line 467: Output port <C_OUT_2> of the instance <gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_tap_memory.tap_memory> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" line 467: Output port <C_RELOAD_OUT> of the instance <gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_tap_memory.tap_memory> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" line 690: Output port <AC> of the instance <gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_calc_norm.calc> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" line 690: Output port <PAT_DET> of the instance <gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_calc_norm.calc> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" line 690: Output port <PAT_DET_B> of the instance <gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_calc_norm.calc> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" line 878: Output port <D_OUT> of the instance <gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_data_casc.data_casc_dly> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\filt_arm_add_casc.vhd" line 973: Output port <D_OUT> of the instance <gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_data_sym_casc.gen_norm.data_sym_casc_dly> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <coef_reload_data<0><1>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:2935 - Signal 'coef_reload_addr<0><1>', unconnected in block 'filt_arm_add_casc', is tied to its initial value (0000000).
+WARNING:Xst:2935 - Signal 'c_we<0>', unconnected in block 'filt_arm_add_casc', is tied to its initial value (0000).
+WARNING:Xst:653 - Signal <gen_independant_col[0].gen_split_col[0].gen_taps[1].PCIN_sel> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 7-bit register for signal <coef_addr<0><2>>.
+    Found 1-bit register for signal <addsub<0><2>>.
+    Found 1-bit register for signal <addsup<0><2>>.
+    Found 1-bit register for signal <we_sym<0><2>>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <filt_arm_add_casc> synthesized.
+
+Synthesizing Unit <tap_memory_add_casc>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\tap_memory_add_casc.vhd".
+        param = ((p_dsp48a1,true,false,false,true,32,8,2),1,1,1,1,0,0,0,128,0,0,71,1,1)
+        tap_num = 1
+        col_num = 0
+        elab_dir = "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\.\tmp\_cg\"
+        comp_name = "LP_500"
+    Set property "KEEP_HIERARCHY = SOFT" for instance <gen_coef_norm.gen_ram.coef_ram>.
+WARNING:Xst:647 - Input <C_RELOAD_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <C_ADDR_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <C_RELOAD_ADDR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <C_RELOAD_WE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <C_OUT_2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <tap_memory_add_casc> synthesized.
+
+Synthesizing Unit <dpt_ram>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\dpt_ram.vhd".
+        param = ((p_dsp48a1,true,false,false,true,32,8,2),1,1,1,0,0,1,false)
+        elab_dir = ""
+        mif_file = ""
+    Set property "KEEP_HIERARCHY = SOFT".
+    Set property "ram_style = block" for signal <ram>.
+WARNING:Xst:647 - Input <SCLR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 256x16-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 16-bit register for signal <doA_reg>.
+    Found 16-bit register for signal <doB>.
+    Found 16-bit register for signal <doB_reg>.
+    Found 16-bit register for signal <doA>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  64 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <dpt_ram> synthesized.
+
+Synthesizing Unit <sp_ram>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\sp_ram.vhd".
+        param = ((p_dsp48a1,true,false,false,true,32,8,2),1,1,0,0,1,1,true)
+        elab_dir = "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\.\tmp\_cg\"
+        mif_file = "LP_500COEFF_auto0_0.mif"
+    Set property "KEEP_HIERARCHY = SOFT".
+    Set property "ram_style = block" for signal <ram>.
+    Set property "rom_style = block" for signal <rom>.
+WARNING:Xst:647 - Input <DATA_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <WE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <SCLR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2999 - Signal 'rom', unconnected in block 'sp_ram', is tied to its initial value.
+    Found 128x16-bit single-port Read Only RAM <Mram_rom> for signal <rom>.
+    Found 16-bit register for signal <d_out>.
+    Found 16-bit register for signal <do>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <sp_ram> synthesized.
+
+Synthesizing Unit <emb_calc>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\emb_calc.vhd".
+        param = ((p_dsp48a1,true,false,false,true,32,8,2),1,1,0,0,0,0,0,0,0,0,0,0,1,false,"000000000000000000000000000000000000000000000000","111111111111111111111111111111111111111111111110",33,(false,false,false,true,false,true,true,false,false,false,false,false,false,false,false,false),false,0,16,16)
+WARNING:Xst:647 - Input <CIN_SEL<2:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PRE_ADDSUB> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <CARRYIN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <PAT_DET> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <PAT_DET_B> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <emb_calc> synthesized.
+
+Synthesizing Unit <delay_4>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\delay.vhd".
+        delay_len = 0
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        implementation = 1
+        default_data = 0
+        mem_type = 1
+WARNING:Xst:647 - Input <WE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <CE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <SCLR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <delay_4> synthesized.
+
+Synthesizing Unit <delay_6>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\delay.vhd".
+        delay_len = 1
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        implementation = 1
+        default_data = 0
+        mem_type = 1
+    Found 16-bit register for signal <gen_reg.d_reg>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <delay_6> synthesized.
+
+Synthesizing Unit <delay_7>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\delay.vhd".
+        delay_len = 5
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        implementation = 1
+        default_data = 0
+        mem_type = 1
+    Set property "shreg_extract = yes" for signal <gen_dly.delay_bus<4>>.
+    Set property "shreg_extract = yes" for signal <gen_dly.delay_bus<3>>.
+    Set property "shreg_extract = yes" for signal <gen_dly.delay_bus<2>>.
+    Set property "shreg_extract = yes" for signal <gen_dly.delay_bus<1>>.
+    Set property "shreg_extract = yes" for signal <gen_dly.delay_bus<0>>.
+WARNING:Xst:647 - Input <SCLR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <gen_dly.delay_bus<3>>.
+    Found 2-bit register for signal <gen_dly.delay_bus<2>>.
+    Found 2-bit register for signal <gen_dly.delay_bus<1>>.
+    Found 2-bit register for signal <gen_dly.delay_bus<0>>.
+    Found 2-bit register for signal <gen_dly.delay_bus<4>>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <delay_7> synthesized.
+
+Synthesizing Unit <delay_bit_4>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\delay_bit.vhd".
+        delay_len = 8
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        implementation = 1
+        mem_type = 1
+    Set property "shreg_extract = yes" for signal <gen_rtl.delay_bus>.
+WARNING:Xst:647 - Input <SCLR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <gen_rtl.delay_bus>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <delay_bit_4> synthesized.
+
+Synthesizing Unit <output_latch>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd".
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        use_clr_op = false
+WARNING:Xst:647 - Input <clr_op> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[0].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[1].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[2].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[3].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[4].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[5].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[6].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[7].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[8].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[9].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[10].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[11].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[12].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[13].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[14].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[15].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[16].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[17].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[18].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[19].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[20].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[21].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[22].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[23].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[24].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[25].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[26].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[27].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[28].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[29].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[30].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[31].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 105: Output port <not_latch> of the instance <gen_data_reg[32].dataout_latch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\output_latch.vhd" line 129: Output port <not_latch> of the instance <gen_chan_reg[0].chanout_latch> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <output_latch> synthesized.
+
+Synthesizing Unit <latch_gen_5>.
+    Related source file is "C:\Users\Felix\Google Drive\OSPESA\DSP_demo\ipcore_dir\tmp\_cg\_bbx\fir_compiler_v5_0\toolbox\latch_gen.vhd".
+        family = (p_dsp48a1,true,false,false,true,32,8,2)
+        set_string = "2&1"
+        clr_string = "0|1&!2"
+        set_over_clr = 0
+        no_default = 0
+        init_sclr = 0
+        select_ip = 0
+        sel_string = ""
+WARNING:Xst:653 - Signal <not_latch_gen> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <latch_gen_5> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 128x16-bit single-port Read Only RAM                  : 1
+ 256x16-bit dual-port RAM                              : 1
+# Registers                                            : 37
+ 1-bit register                                        : 15
+ 16-bit register                                       : 10
+ 2-bit register                                        : 9
+ 4-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 1
+# Multiplexers                                         : 89
+ 1-bit 2-to-1 multiplexer                              : 76
+ 16-bit 2-to-1 multiplexer                             : 2
+ 7-bit 2-to-1 multiplexer                              : 11
+# Xors                                                 : 35
+ 1-bit xor2                                            : 35
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <dpt_ram>.
+INFO:Xst:3226 - The RAM <Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <doB> <doA> <doB_reg> <doA_reg>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <WEB>           | high     |
+    |     addrA          | connected to signal <ADDRB>         |          |
+    |     diA            | connected to signal <DB_IN>         |          |
+    |     doA            | connected to signal <doB_reg>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLK>           | rise     |
+    |     weB            | connected to signal <WEA>           | high     |
+    |     addrB          | connected to signal <("0",ADDRA)>   |          |
+    |     diB            | connected to signal <DA_IN>         |          |
+    |     doB            | connected to signal <doA_reg>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <dpt_ram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sp_ram>.
+INFO:Xst:3226 - The RAM <Mram_rom> will be implemented as a BLOCK RAM, absorbing the following register(s): <do> <d_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ADDR>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <d_out>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <sp_ram> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 128x16-bit single-port block Read Only RAM            : 1
+ 256x16-bit dual-port block RAM                        : 1
+# Registers                                            : 194
+ Flip-Flops                                            : 194
+# Multiplexers                                         : 87
+ 1-bit 2-to-1 multiplexer                              : 76
+ 7-bit 2-to-1 multiplexer                              : 11
+# Xors                                                 : 35
+ 1-bit xor2                                            : 35
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <accum_opcode_2> has a constant value of 0 in block <mac_fir_single_rate>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <addsub<0>_2> has a constant value of 0 in block <filt_arm_add_casc>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <gen_data_addr/gen_struct.gen_reset_dly/gen_rtl.gen_reg.d_reg> in Unit <mac_fir_single_rate> is equivalent to the following 2 FFs/Latches, which will be removed : <gen_coef_addr/gen_struct.gen_skip_base_max_dly/gen_rtl.gen_reg.d_reg> <gen_coef_addr/gen_struct.gen_count_max_dly/gen_rtl.gen_reg.d_reg> 
+INFO:Xst:2261 - The FF/Latch <base_max_latch> in Unit <mac_fir_single_rate> is equivalent to the following FF/Latch, which will be removed : <chan_max_latch> 
+WARNING:Xst:1293 - FF/Latch <gen_data_addr/gen_struct.gen_reset_dly/gen_rtl.gen_reg.d_reg> has a constant value of 0 in block <mac_fir_single_rate>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen_coef_addr/gen_struct.gen_sclr_dly/gen_rtl.delay_bus_0> has a constant value of 0 in block <mac_fir_single_rate>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen_coef_addr/gen_struct.gen_sclr_dly/gen_rtl.delay_bus_1> has a constant value of 0 in block <mac_fir_single_rate>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <filter_sel_in_0> of sequential type is unconnected in block <mac_fir_single_rate>.
+WARNING:Xst:2677 - Node <coef_addr<0>_2_0> of sequential type is unconnected in block <filt_arm_add_casc>.
+WARNING:Xst:2677 - Node <coef_addr<0>_2_1> of sequential type is unconnected in block <filt_arm_add_casc>.
+WARNING:Xst:2677 - Node <coef_addr<0>_2_2> of sequential type is unconnected in block <filt_arm_add_casc>.
+WARNING:Xst:2677 - Node <coef_addr<0>_2_3> of sequential type is unconnected in block <filt_arm_add_casc>.
+WARNING:Xst:2677 - Node <coef_addr<0>_2_4> of sequential type is unconnected in block <filt_arm_add_casc>.
+WARNING:Xst:2677 - Node <coef_addr<0>_2_5> of sequential type is unconnected in block <filt_arm_add_casc>.
+WARNING:Xst:2677 - Node <coef_addr<0>_2_6> of sequential type is unconnected in block <filt_arm_add_casc>.
+WARNING:Xst:2677 - Node <gen_filter_block/addsup<0>_2> of sequential type is unconnected in block <mac_fir_single_rate>.
+INFO:Xst:2261 - The FF/Latch <gen_addsub_dly/gen_dly.delay_bus<0>_0> in Unit <mac_fir_single_rate> is equivalent to the following FF/Latch, which will be removed : <gen_filter_block/we_sym<0>_2> 
+
+Optimizing unit <LP_500_fir_compiler_v5_0_xst_1> ...
+
+Optimizing unit <delay_2> ...
+
+Optimizing unit <dpt_ram> ...
+
+Optimizing unit <sp_ram> ...
+
+Optimizing unit <delay_6> ...
+
+Optimizing unit <delay_7> ...
+
+Optimizing unit <delay_bit_4> ...
+
+Optimizing unit <mac_fir_single_rate> ...
+
+Optimizing unit <counter_1> ...
+
+Optimizing unit <counter_2> ...
+
+Optimizing unit <counter_3> ...
+
+Optimizing unit <counter_4> ...
+
+Optimizing unit <counter_5> ...
+
+Optimizing unit <output_latch> ...
+WARNING:Xst:1293 - FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg> has a constant value of 0 in block <LP_500_fir_compiler_v5_0_xst_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg> has a constant value of 0 in block <LP_500_fir_compiler_v5_0_xst_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg> has a constant value of 0 in block <LP_500_fir_compiler_v5_0_xst_1>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_we_dly/gen_rtl.delay_bus_0> in Unit <LP_500_fir_compiler_v5_0_xst_1> is equivalent to the following FF/Latch, which will be removed : <U0/g_mac.mac/fir_select/gen_single_rate.fir/opcodecntrldly/gen_dly.delay_bus_0_0> 
+INFO:Xst:2261 - The FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_we_dly/gen_rtl.delay_bus_1> in Unit <LP_500_fir_compiler_v5_0_xst_1> is equivalent to the following FF/Latch, which will be removed : <U0/g_mac.mac/fir_select/gen_single_rate.fir/opcodecntrldly/gen_dly.delay_bus_1_0> 
+INFO:Xst:2261 - The FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_addsub_dly/gen_dly.delay_bus<0>_0> in Unit <LP_500_fir_compiler_v5_0_xst_1> is equivalent to the following FF/Latch, which will be removed : <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_latch_op/gen_rtl.delay_bus_2> 
+INFO:Xst:2261 - The FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_coef_addr/gen_struct.gen_en_dly/gen_rtl.delay_bus_0> in Unit <LP_500_fir_compiler_v5_0_xst_1> is equivalent to the following FF/Latch, which will be removed : <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_addr/gen_struct.gen_en_dly/gen_rtl.gen_reg.d_reg> 
+INFO:Xst:2261 - The FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_we_sym_dly/gen_rtl.delay_bus_0> in Unit <LP_500_fir_compiler_v5_0_xst_1> is equivalent to the following FF/Latch, which will be removed : <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_latch_op/gen_rtl.delay_bus_0> 
+INFO:Xst:2261 - The FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_we_sym_dly/gen_rtl.delay_bus_1> in Unit <LP_500_fir_compiler_v5_0_xst_1> is equivalent to the following FF/Latch, which will be removed : <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_latch_op/gen_rtl.delay_bus_1> 
+INFO:Xst:2261 - The FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_addsub_dly/gen_dly.delay_bus<1>_0> in Unit <LP_500_fir_compiler_v5_0_xst_1> is equivalent to the following FF/Latch, which will be removed : <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_latch_op/gen_rtl.delay_bus_3> 
+
+Mapping all equations...
+WARNING:Xst:1293 - FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg> has a constant value of 0 in block <LP_500_fir_compiler_v5_0_xst_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg> has a constant value of 0 in block <LP_500_fir_compiler_v5_0_xst_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg> has a constant value of 0 in block <LP_500_fir_compiler_v5_0_xst_1>. This FF/Latch will be trimmed during the optimization process.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block LP_500_fir_compiler_v5_0_xst_1, actual ratio is 3.
+INFO:Xst:2260 - The FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_blank_reg/gen_blank_regs[0].blank_reg_x/gen_init_0.i_reg> in Unit <LP_500_fir_compiler_v5_0_xst_1> is equivalent to the following FF/Latch : <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_blank_reg/gen_blank_regs[1].blank_reg_x/gen_init_0.i_reg> 
+WARNING:Xst:1293 - FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg> has a constant value of 0 in block <LP_500_fir_compiler_v5_0_xst_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg> has a constant value of 0 in block <LP_500_fir_compiler_v5_0_xst_1>. This FF/Latch will be trimmed during the optimization process.
+FlipFlop U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_latch_op/gen_rtl.delay_bus_7 has been replicated 1 time(s)
+WARNING:Xst:1293 - FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg> has a constant value of 0 in block <LP_500_fir_compiler_v5_0_xst_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg> has a constant value of 0 in block <LP_500_fir_compiler_v5_0_xst_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg> has a constant value of 0 in block <LP_500_fir_compiler_v5_0_xst_1>. This FF/Latch will be trimmed during the optimization process.
+
+Final Macro Processing ...
+
+Processing Unit <LP_500_fir_compiler_v5_0_xst_1> :
+	Found 2-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_we_dly/gen_rtl.delay_bus_1>.
+	Found 2-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_we_sym_dly/gen_rtl.delay_bus_1>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_15>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_14>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_13>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_12>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_11>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_10>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_9>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_8>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_7>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_6>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_5>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_4>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_3>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_2>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_1>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/gen_dly.delay_bus_2_0>.
+	Found 5-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/opcodecntrldly/gen_dly.delay_bus_4_1>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/opcodecntrldly/gen_dly.delay_bus_4_0>.
+	Found 3-bit shift register for signal <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_latch_op/gen_rtl.delay_bus_6>.
+Unit <LP_500_fir_compiler_v5_0_xst_1> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 107
+ Flip-Flops                                            : 107
+# Shift Registers                                      : 21
+ 2-bit shift register                                  : 2
+ 3-bit shift register                                  : 18
+ 5-bit shift register                                  : 1
+
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg> has a constant value of 0 in block <LP_500_fir_compiler_v5_0_xst_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg> has a constant value of 0 in block <LP_500_fir_compiler_v5_0_xst_1>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : LP_500_fir_compiler_v5_0_xst_1.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 169
+#      GND                         : 3
+#      INV                         : 1
+#      LUT1                        : 16
+#      LUT2                        : 14
+#      LUT3                        : 49
+#      LUT4                        : 1
+#      LUT5                        : 3
+#      MUXCY                       : 5
+#      MUXCY_D                     : 7
+#      MUXCY_L                     : 30
+#      VCC                         : 3
+#      XORCY                       : 37
+# FlipFlops/Latches                : 128
+#      FD                          : 45
+#      FDE                         : 39
+#      FDRE                        : 42
+#      FDSE                        : 2
+# RAMS                             : 2
+#      RAMB8BWER                   : 2
+# Shift Registers                  : 21
+#      SRLC16E                     : 21
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             128  out of  11440     1%  
+ Number of Slice LUTs:                  105  out of   5720     1%  
+    Number used as Logic:                84  out of   5720     1%  
+    Number used as Memory:               21  out of   1440     1%  
+       Number used as SRL:               21
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    134
+   Number with an unused Flip Flop:       6  out of    134     4%  
+   Number with an unused LUT:            29  out of    134    21%  
+   Number of fully used LUT-FF pairs:    99  out of    134    73%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                        1695
+ Number of bonded IOBs:                   0  out of    102     0%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of DSP48A1s:                      1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                                                                                                     | Load  |
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+clk                                | NONE(U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_filter_block/gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_calc_norm.calc/gen_structural.gen_spartan.gen_dsp48_s6.dsp48_s6)| 152   |
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 2.637ns (Maximum Frequency: 379.219MHz)
+   Minimum input arrival time before clock: 0.000ns
+   Maximum output required time after clock: 0.525ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.637ns (frequency: 379.219MHz)
+  Total number of paths / destination ports: 720 / 264
+-------------------------------------------------------------------------
+Delay:               2.637ns (Levels of Logic = 1)
+  Source:            U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_filter_block/gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_tap_memory.tap_memory/gen_data_comb.data_ram/Mram_ram (RAM)
+  Destination:       U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_filter_block/gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_calc_norm.calc/gen_structural.gen_spartan.gen_dsp48_s6.dsp48_s6 (DSP)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_filter_block/gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_tap_memory.tap_memory/gen_data_comb.data_ram/Mram_ram to U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_filter_block/gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_calc_norm.calc/gen_structural.gen_spartan.gen_dsp48_s6.dsp48_s6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKAWRCLK->DOADO15    3   1.700   0.765  Mram_ram (DB_OUT<15>)
+     end scope: 'U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_filter_block/gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_tap_memory.tap_memory/gen_data_comb.data_ram:DB_OUT<15>'
+     DSP48A1:B17               0.172          U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_filter_block/gen_independant_col[0].gen_split_col[0].gen_taps[1].gen_calc_norm.calc/gen_structural.gen_spartan.gen_dsp48_s6.dsp48_s6
+    ----------------------------------------
+    Total                      2.637ns (1.872ns logic, 0.765ns route)
+                                       (71.0% logic, 29.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              0.000ns (Levels of Logic = 0)
+  Source:            din<15> (PAD)
+  Destination:       U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/Mshreg_gen_dly.delay_bus_2_15 (FF)
+  Destination Clock: clk rising
+
+  Data Path: din<15> to U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/Mshreg_gen_dly.delay_bus_2_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRLC16E:D                -0.060          U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_data_dly/Mshreg_gen_dly.delay_bus_2_15
+    ----------------------------------------
+    Total                      0.000ns (0.000ns logic, 0.000ns route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 36 / 36
+-------------------------------------------------------------------------
+Offset:              0.525ns (Levels of Logic = 0)
+  Source:            U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg (FF)
+  Destination:       chan_out<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg to chan_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.525   0.000  U0/g_mac.mac/fir_select/gen_single_rate.fir/gen_op_reg.gen_output_latch/gen_chan_reg[0].chanout_latch/gen_init_0.i_reg (chan_out<0>)
+    ----------------------------------------
+    Total                      0.525ns (0.525ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.637|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 34.00 secs
+Total CPU time to Xst completion: 33.91 secs
+ 
+--> 
+
+Total memory usage is 205548 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  156 (   0 filtered)
+Number of infos    :   99 (   0 filtered)
+
